@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=676;
+		nextID=680;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14667.485,57.850685,16736.475};
-		dir[]={-0.55689114,-0.62172246,0.55088109};
-		up[]={-0.44200489,0.78323376,0.43723553};
-		aside[]={0.70330364,5.4948032e-008,0.71097481};
+		pos[]={14641.737,23.170815,16763.912};
+		dir[]={-0.88665909,-0.27049157,0.37529868};
+		up[]={-0.24914593,0.96270776,0.10545773};
+		aside[]={0.38982314,3.1804666e-007,0.92097515};
 	};
 };
 binarizationWanted=0;
@@ -327,7 +327,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=551;
+		items=555;
 		class Item0
 		{
 			dataType="Marker";
@@ -9233,6 +9233,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this addAction[""HALO Jump Menu"", ""ATM_airdrop\atm_airdrop.sqf""]; this allowDamage false; this setFlagTexture ""media\images\TFT8_flag.paa""";
+				name="haloFlag";
 			};
 			id=416;
 			type="Flag_NATO_F";
@@ -14952,6 +14953,176 @@ class Mission
 			id=659;
 			type="Land_HBarrierBig_F";
 			atlOffset=0.024000168;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item551
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14629.113,18.295673,16770.898};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				lock="UNLOCKED";
+				createAsSimpleObject=1;
+				disableSimulation=1;
+			};
+			id=676;
+			type="Land_CncBarrier_stripes_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item552
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14629.124,18.295673,16766.447};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				lock="UNLOCKED";
+				createAsSimpleObject=1;
+				disableSimulation=1;
+			};
+			id=677;
+			type="Land_CncBarrier_stripes_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item553
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14631.548,18.295673,16768.637};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				lock="UNLOCKED";
+				createAsSimpleObject=1;
+				disableSimulation=1;
+			};
+			id=678;
+			type="Land_CncBarrier_stripes_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item554
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14626.646,18.295673,16768.521};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				lock="UNLOCKED";
+				createAsSimpleObject=1;
+				disableSimulation=1;
+			};
+			id=679;
+			type="Land_CncBarrier_stripes_F";
 			class CustomAttributes
 			{
 				class Attribute0
