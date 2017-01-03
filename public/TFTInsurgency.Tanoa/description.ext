@@ -1,0 +1,15 @@
+﻿respawnTemplates[] = {"Spectator", "EndMission", "MenuPosition"};
+respawnOnStart = -1;
+onLoadName = "TFT Insurgency";
+
+#include "VVS\menu.h"
+#include "VAS\menu.hpp"
+#include "CHVD\dialog.hpp"
+
+class CfgFunctions
+{
+    #include "VVS\Functions.h"
+    #include "VAS\cfgfunctions.hpp"
+    #include "CHVD\CfgFunctions.hpp"
+    #include "functions\cfgfunctions.hpp"
+};
