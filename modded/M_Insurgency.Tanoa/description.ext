@@ -1,0 +1,833 @@
+﻿onLoadName = "TFT Insurgency v1.1m";
+respawnTemplates[] = {"MenuPosition","MenuInventory","Spectator","EndMission"};
+respawnOnStart = 0;
+disabledAI = 1;
+
+#include "VVS\menu.h"
+#include "VAS\menu.hpp"
+
+class CfgFunctions {
+    #include "VVS\Functions.h"
+    #include "VAS\cfgfunctions.hpp"
+    #include "functions\cfgfunctions.hpp"
+};
+
+ class CfgRoles {
+    class W75 {
+        displayName = "Rangers";
+        icon = "\a3\ui_f\data\map\markers\nato\n_inf.paa";
+    };
+    class W160 {
+        displayName = "SOAR";
+        icon = "\a3\ui_f\data\map\markers\nato\n_air.paa";
+    };
+};
+
+class CfgRespawnInventory {
+
+    class RM {
+        displayName = "Rifleman";
+        icon = "iconMan";
+        role = "W75";
+        uniformClass = "TFT_Uniform_OCP";
+        weapons[] = {
+            "hlc_rifle_M4",
+            "hgun_P07_F",
+            "Throw",
+            "Put"
+        };
+        magazines[] = {
+            "SmokeShellGreen",
+            "SmokeShellGreen",
+            "B_IR_Grenade",
+            "Chemlight_green",
+            "Chemlight_green",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "ACE_M84",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "HandGrenade"
+        };
+        items[] = {
+            "ACE_EarPlugs",
+            "acc_flashlight",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_MapTools",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_epinephrine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_bloodIV",
+            "ACE_IR_Strobe_Item"
+        };
+        linkedItems[] = {
+            "TFT_Vest_OCP",
+            "TFT_Helmet_OCP",
+            "optic_Holosight_blk_F",
+            "acc_pointer_IR",
+            "ACE_muzzle_mzls_L",
+            "G_Combat",
+            "ItemMap",
+            "ItemCompass",
+            "ItemWatch",
+            "NVGoggles_INDEP",
+            "tf_anprc152"
+        };
+    };
+
+    class STL {
+        displayName = "Squad/Team Leader";
+        icon = "a3\ui_f\data\map\iconmanleader_ca.paa";
+        role = "W75";
+        uniformClass = "TFT_Uniform_OCP";
+        backpack = "tf_rt1523g_bwmod";
+        weapons[] = {
+            "Laserdesignator",
+            "arifle_SPAR_01_GL_khk_F",
+            "hgun_P07_F",
+            "Binocular",
+            "Throw",
+            "Put"
+        };
+        magazines[] = {
+            "SmokeShellGreen",
+            "SmokeShellGreen",
+            "B_IR_Grenade",
+            "Chemlight_green",
+            "Chemlight_green",
+            "HandGrenade",
+            "HandGrenade",
+            "Laserbatteries",
+            "ACE_M84",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "UGL_FlareWhite_F",
+            "UGL_FlareWhite_F",
+            "UGL_FlareGreen_F",
+            "UGL_FlareGreen_F",
+            "UGL_FlareCIR_F",
+            "UGL_FlareCIR_F",
+            "1Rnd_Smoke_Grenade_shell",
+            "1Rnd_Smoke_Grenade_shell",
+            "1Rnd_Smoke_Grenade_shell",
+            "1Rnd_SmokeRed_Grenade_shell",
+            "1Rnd_SmokeRed_Grenade_shell",
+            "1Rnd_SmokeRed_Grenade_shell",
+            "1Rnd_SmokeGreen_Grenade_shell",
+            "1Rnd_SmokeGreen_Grenade_shell",
+            "1Rnd_SmokeGreen_Grenade_shell",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_red"
+        };
+        items[] = {
+            "ACE_EarPlugs",
+            "acc_flashlight",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_MapTools",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_epinephrine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_bloodIV"
+        };
+        linkedItems[] = {
+            "TFT_Vest_OCP",
+            "TFT_Helmet_OCP",
+            "optic_Hamr",
+            "acc_pointer_IR",
+            "ACE_muzzle_mzls_L",
+            "G_Tactical_Black",
+            "ItemMap",
+            "ItemCompass",
+            "ItemWatch",
+            "NVGoggles_INDEP",
+            "ItemGPS",
+            "tf_anprc152"
+        };
+    };
+
+    class GRN {
+        displayName = "Grenadier";
+        icon = "iconMan";
+        role = "W75";
+        uniformClass = "TFT_Uniform_OCP";
+        backpack = "TFT_Assault_OCP";
+        weapons[] = {
+            "hlc_rifle_m4m203",
+            "hgun_P07_F",
+            "Binocular",
+            "Throw",
+            "Put"
+        };
+        magazines[] = {
+            "SmokeShellGreen",
+            "SmokeShellGreen",
+            "B_IR_Grenade",
+            "Chemlight_green",
+            "Chemlight_green",
+            "HandGrenade",
+            "HandGrenade",
+            "ACE_M84",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell",
+            "UGL_FlareWhite_F",
+            "UGL_FlareWhite_F",
+            "UGL_FlareWhite_F",
+            "UGL_FlareGreen_F",
+            "UGL_FlareGreen_F",
+            "UGL_FlareCIR_F",
+            "UGL_FlareCIR_F",
+            "1Rnd_Smoke_Grenade_shell",
+            "1Rnd_Smoke_Grenade_shell",
+            "1Rnd_Smoke_Grenade_shell",
+            "1Rnd_SmokeRed_Grenade_shell",
+            "1Rnd_SmokeRed_Grenade_shell",
+            "1Rnd_SmokeRed_Grenade_shell",
+            "1Rnd_SmokeGreen_Grenade_shell",
+            "1Rnd_SmokeGreen_Grenade_shell",
+            "1Rnd_SmokeGreen_Grenade_shell",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_red"
+        };
+        items[] = {
+            "ACE_EarPlugs",
+            "acc_flashlight",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_MapTools",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_epinephrine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_bloodIV"
+        };
+        linkedItems[] = {
+            "TFT_Vest_OCP",
+            "TFT_Helmet_OCP",
+            "optic_Holosight_blk_F",
+            "acc_pointer_IR",
+            "ACE_muzzle_mzls_L",
+            "G_Combat",
+            "ItemMap",
+            "ItemCompass",
+            "ItemWatch",
+            "NVGoggles_INDEP",
+            "tf_anprc152"
+        };
+    };
+
+    class AR {
+        displayName = "AutoRifleman";
+        icon = "a3\ui_f\data\map\vehicleiconsiconManMG";
+        role = "W75";
+        uniformClass = "TFT_Uniform_OCP";
+        backpack = "TFT_Assault_OCP";
+        weapons[] = {
+            "LMG_03_F",
+            "hgun_P07_F",
+            "Binocular",
+            "Throw",
+            "Put"
+        };
+        magazines[] = {
+            "HandGrenade",
+            "HandGrenade",
+            "SmokeShellGreen",
+            "SmokeShellGreen",
+            "B_IR_Grenade",
+            "Chemlight_green",
+            "Chemlight_green",
+            "16Rnd_9x21_red_Mag",
+            "ACE_M84",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "HandGrenade",
+            "HandGrenade",
+            "SmokeShellGreen",
+            "SmokeShellGreen",
+            "ACE_Chemlight_HiOrange",
+            "Chemlight_green",
+            "Chemlight_green",
+            "B_IR_Grenade",
+            "B_IR_Grenade",
+            "200Rnd_556x45_Box_Tracer_Red_F",
+            "200Rnd_556x45_Box_Tracer_Red_F",
+            "B_IR_Grenade"
+        };
+        items[] = {
+            "ACE_EarPlugs",
+            "acc_flashlight",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_epinephrine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_bloodIV",
+            "ACE_IR_Strobe_Item",
+            "ACE_MapTools"
+        };
+        linkedItems[] = {
+            "TFT_Vest_OCP",
+            "TFT_Helmet_OCP",
+            "optic_Hamr",
+            "acc_pointer_IR",
+            "ACE_muzzle_mzls_L",
+            "G_Lowprofile",
+            "ItemMap",
+            "ItemCompass",
+            "ItemWatch",
+            "NVGoggles_INDEP",
+            "tf_anprc152"
+        };
+    };
+
+    class MAT {
+        displayName = "MAAWS Anti-Tank";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManAT";
+        role = "W75";
+        uniformClass = "TFT_Uniform_OCP";
+        backpack = "TFT_Kitbag_OCP";
+        weapons[] = {
+            "hlc_rifle_M4",
+            "tf47_m3maaws",
+            "hgun_P07_F",
+            "Binocular",
+            "Throw",
+            "Put"
+        };
+        magazines[] = {
+            "SmokeShellGreen",
+            "SmokeShellGreen",
+            "B_IR_Grenade",
+            "Chemlight_green",
+            "Chemlight_green",
+            "HandGrenade",
+            "HandGrenade",
+            "ACE_M84",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "16Rnd_9x21_red_Mag",
+            "16Rnd_9x21_red_Mag",
+            "tf47_m3maaws_HEAT",
+            "tf47_m3maaws_HEAT",
+            "tf47_m3maaws_HEAT"
+        };
+        items[] = {
+            "ACE_EarPlugs",
+            "acc_flashlight",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_MapTools",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_epinephrine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_bloodIV"
+        };
+        linkedItems[] = {
+            "TFT_Vest_OCP",
+            "TFT_Helmet_OCP",
+            "optic_Holosight_blk_F",
+            "acc_pointer_IR",
+            "ACE_muzzle_mzls_L",
+            "G_Combat",
+            "ItemMap",
+            "ItemCompass",
+            "ItemWatch",
+            "NVGoggles_INDEP",
+            "tf_anprc152"
+        };
+    };
+
+        class TAT {
+        displayName = "Titan Anti-Tank";
+        icon = "a3\ui_f\data\map\vehicleicons\iconManAT";
+        role = "W75";
+        uniformClass = "TFT_Uniform_OCP";
+        backpack = "TFT_Kitbag_OCP";
+        weapons[] = {
+            "hlc_rifle_M4",
+            "launch_B_Titan_short_tna_F",
+            "hgun_P07_F",
+            "Binocular",
+            "Throw",
+            "Put"
+        };
+        magazines[] = {
+            "SmokeShellGreen",
+            "SmokeShellGreen",
+            "B_IR_Grenade",
+            "Chemlight_green",
+            "Chemlight_green",
+            "HandGrenade",
+            "HandGrenade",
+            "ACE_M84",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "16Rnd_9x21_red_Mag",
+            "16Rnd_9x21_red_Mag",
+            "Titan_AT",
+            "Titan_AT",
+            "Titan_AT"
+        };
+        items[] = {
+            "ACE_EarPlugs",
+            "acc_flashlight",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_MapTools",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_epinephrine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_bloodIV"
+        };
+        linkedItems[] = {
+            "TFT_Vest_OCP",
+            "TFT_Helmet_OCP",
+            "optic_Holosight_blk_F",
+            "acc_pointer_IR",
+            "ACE_muzzle_mzls_L",
+            "G_Combat",
+            "ItemMap",
+            "ItemCompass",
+            "ItemWatch",
+            "NVGoggles_INDEP",
+            "tf_anprc152"
+        };
+    };
+
+    class CLS {
+        displayName = "Combat Lifesaver";
+        icon = "a3\ui_f\data\map\iconmanmedic_ca.paa";
+        role = "W75";
+        uniformClass = "TFT_Uniform_OCP";
+        backpack = "TFT_Assault_OCP";
+        weapons[] = {
+            "hlc_rifle_M4",
+            "hgun_P07_F",
+            "Binocular",
+            "Throw",
+            "Put"
+        };
+        magazines[] = {
+            "SmokeShellGreen",
+            "SmokeShellGreen",
+            "B_IR_Grenade",
+            "Chemlight_green",
+            "Chemlight_green",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "HandGrenade",
+            "HandGrenade",
+            "HandGrenade",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell"
+        };
+        items[] = {
+            "ACE_EarPlugs",
+            "acc_flashlight",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_MapTools",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_epinephrine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_bloodIV",
+            "ACE_bloodIV",
+            "ACE_bloodIV",
+            "ACE_bloodIV",
+            "ACE_bloodIV",
+            "ACE_bloodIV",
+            "ACE_bodyBag",
+            "ACE_bodyBag"
+        };
+        linkedItems[] = {
+            "TFT_Vest_OCP",
+            "TFT_Helmet_OCP",
+            "optic_Holosight_blk_F",
+            "acc_pointer_IR",
+            "ACE_muzzle_mzls_L",
+            "TFT_Bandana_snow",
+            "ItemMap",
+            "ItemCompass",
+            "ItemWatch",
+            "NVGoggles_INDEP",
+            "tf_anprc152"
+        };
+    };
+
+    class DMR {
+        displayName = "Designated Marksman";
+        icon = "a3\ui_f\data\map\iconmanrecon_ca.paa";
+        role = "W75";
+        uniformClass = "TFT_Uniform_OCP";
+        weapons[] = {
+            "hlc_rifle_M4",
+            "hgun_P07_F",
+            "Laserdesignator",
+            "Throw",
+            "Put"
+        };
+        magazines[] = {
+            "SmokeShellGreen",
+            "SmokeShellGreen",
+            "B_IR_Grenade",
+            "Chemlight_green",
+            "Chemlight_green",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "HandGrenade",
+            "HandGrenade",
+            "HandGrenade",
+            "ACE_M84",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "SmokeShell",
+            "Laserbatteries"
+        };
+        items[] = {
+            "ACE_EarPlugs",
+            "acc_flashlight",
+            "ACE_CableTie",
+            "ACE_CableTie",
+            "ACE_MapTools",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_epinephrine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_bloodIV"
+        };
+        linkedItems[] = {
+            "TFT_Vest_OCP",
+            "TFT_Helmet_OCP",
+            "G_Combat",
+            "optic_DMS",
+            "acc_pointer_IR",
+            "ACE_muzzle_mzls_L",
+            "ItemMap",
+            "ItemCompass",
+            "ItemWatch",
+            "NVGoggles_INDEP",
+            "tf_anprc152"
+        };
+    };
+
+    class SP {
+        displayName = "SOAR Pilot";
+        icon = "iconMan";
+        role = "W160";
+        uniformClass = "TFT_Uniform_OCP";
+        backpack = "tf_rt1523g_bwmod";
+        weapons[] = {
+            "arifle_MXC_Black_F",
+            "Rangefinder",
+            "Throw",
+            "Put"
+        };
+        magazines[] = {
+            "Chemlight_red",
+            "Chemlight_red",
+            "Chemlight_blue",
+            "Chemlight_blue",
+            "Chemlight_green",
+            "Chemlight_green",
+            "SmokeShellPurple",
+            "SmokeShellPurple",
+            "SmokeShellRed",
+            "SmokeShellGreen",
+            "HandGrenade",
+            "SmokeShell",
+            "SmokeShell",
+            "ACE_HandFlare_White",
+            "ACE_HandFlare_Red",
+            "30Rnd_65x39_caseless_mag",
+            "30Rnd_65x39_caseless_mag",
+            "30Rnd_65x39_caseless_mag",
+            "30Rnd_65x39_caseless_mag",
+            "30Rnd_65x39_caseless_mag"
+        };
+        items[] = {
+            "ACE_IR_Strobe_Item",
+            "ACE_MapTools",
+            "ACE_EarPlugs",
+            "ACE_CableTie",
+            "ACE_Flashlight_XL50",
+            "ACE_CableTie",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_epinephrine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_bloodIV"
+        };
+        linkedItems[] = {
+            "TFT_Vest_OCP",
+            "H_CrewHelmetHeli_O",
+            "optic_Holosight_smg_blk_F",
+            "acc_pointer_IR",
+            "ACE_muzzle_mzls_smg_02",
+            "ItemMap",
+            "ItemCompass",
+            "G_Bandanna_oli",
+            "ACE_Altimeter",
+            "B_UavTerminal",
+            "ACE_NVG_Gen4",
+            "tf_anprc152"
+        };
+    };
+
+    class SC {
+        displayName = "SOAR Crew";
+        icon = "iconMan";
+        role = "W160";
+        uniformClass = "TFT_Uniform_OCP";
+        backpack = "tf_rt1523g_bwmod";
+        weapons[] = {
+            "arifle_MXC_Black_F",
+            "Rangefinder",
+            "Throw",
+            "Put"
+        };
+        magazines[] = {
+            "Chemlight_red",
+            "Chemlight_red",
+            "Chemlight_blue",
+            "Chemlight_blue",
+            "Chemlight_green",
+            "Chemlight_green",
+            "SmokeShellPurple",
+            "SmokeShellPurple",
+            "SmokeShellRed",
+            "SmokeShellGreen",
+            "HandGrenade",
+            "SmokeShell",
+            "SmokeShell",
+            "ACE_HandFlare_White",
+            "ACE_HandFlare_Red",
+            "30Rnd_65x39_caseless_mag",
+            "30Rnd_65x39_caseless_mag",
+            "30Rnd_65x39_caseless_mag",
+            "30Rnd_65x39_caseless_mag",
+            "30Rnd_65x39_caseless_mag"
+        };
+        items[] = {
+            "ACE_IR_Strobe_Item",
+            "ACE_MapTools",
+            "ACE_EarPlugs",
+            "ACE_CableTie",
+            "ACE_Flashlight_XL50",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_morphine",
+            "ACE_epinephrine",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_fieldDressing",
+            "ACE_bloodIV",
+            "ACE_CableTie"
+        };
+        linkedItems[] = {
+            "TFT_Vest_OCP",
+            "H_CrewHelmetHeli_O",
+            "optic_Holosight_smg_blk_F",
+            "acc_pointer_IR",
+            "ACE_muzzle_mzls_smg_02",
+            "G_Bandanna_oli",
+            "ItemMap",
+            "ItemCompass",
+            "ACE_Altimeter",
+            "B_UavTerminal",
+            "ACE_NVG_Gen4",
+            "tf_anprc152"
+        };
+    };
+};
