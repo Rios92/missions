@@ -1,0 +1,159 @@
+respawnTemplates[] = {"Spectator", "EndMission", "MenuPosition", "MenuInventory"};
+respawnOnStart = -1;
+
+#include "TFID\UI\DialogColorConstants.hpp"
+#include "TFID\UI\DialogControlClasses.hpp"
+#include "TFID\UI\StoreDialog.hpp"
+
+class RscTitles {
+	#include "TFID\UI\ScoreDialog.hpp"
+};
+
+class CfgFunctions
+{
+    #include "functions\CfgFunctions.hpp"
+    #include "TFID\functions\CfgFunctions.hpp"
+};
+
+class CfgRespawnInventory
+{
+    class AR_Inv
+    {
+        vehicle = "B_soldier_AR_F"
+        role = "AR_Role";
+    };
+    class CLS_Inv
+    {
+        vehicle = "B_medic_F"
+        role = "CLS_Role";
+    };
+    class GRN_Inv
+    {
+        vehicle = "B_Soldier_GL_F"
+        role = "GRN_Role";
+    };
+    class DMR_Inv
+    {
+        vehicle = "B_soldier_M_F"
+        role = "DMR_Role";
+    };
+    class AT_Inv
+    {
+        vehicle = "B_soldier_LAT_F"
+        role = "AT_Role";
+    };
+};
+
+class CfgRoles
+{
+    class AR_Role
+    {
+        displayName = "Autorifleman";
+        icon = "\A3\ui_f\data\map\vehicleicons\iconManMG_ca.paa";
+    };
+    class CLS_Role
+    {
+        displayName = "Medic";
+        icon = "\A3\ui_f\data\map\vehicleicons\iconManMedic_ca.paa";
+    };
+    class GRN_Role
+    {
+        displayName = "Granadier";
+        icon = "\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+    };
+    class DMR_Role
+    {
+        displayName = "Marksman";
+        icon = "\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+    };
+    class AT_Role
+    {
+        displayName = "Rifleman (AT)";
+        icon = "\A3\ui_f\data\map\vehicleicons\iconManAT_ca.paa";
+    };
+};
+
+class CfgNotifications
+{
+	class Wave
+	{
+		title = "Wave %1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
+		color[] = {0.93,0.94,0.95,1};
+		duration = 5;
+		description = "Wave %1 %2";
+		priority = 10;
+	};
+
+	class LeavingArea
+	{
+		title = "Go back";
+		iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
+		iconText = "";
+		color[] = {0.9,0.3,0.23,1};
+		duration = 5;
+		description = "You're leaving your defense point!";
+		priority = 10;
+	};
+    class BackInArea
+	{
+		title = "Welcome back";
+		iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
+		iconText = "";
+		color[] = {0.18,0.8,0.44,1};
+		duration = 5;
+		description = "You're back in defense area";
+		priority = 10;
+	};
+
+	class AddPoints
+	{
+		title = "Bonus Points";
+		iconPicture = "";
+		iconText = "+%1";
+		color[] = {0.18,0.8,0.44,1};
+		duration = 1;
+		description = "%2";
+		priority = 10;
+	};
+};
+
+class Params 
+{
+    class AICount
+	{
+		title = "AI amount modifier";
+		values[] = {3, 6, 9, 12, 20};
+		texts[] = {"Low", "Medium", "High", "Very high", "Insane"};
+		default = 6;
+	};
+	class AISkill
+	{
+		title = "AI skill level";
+		values[] = {1, 2, 3, 5, 7};
+		texts[] = {"Too low", "Low", "Normal", "Higher", "Elite"};
+		default = 3;
+	};
+    class Waves
+	{
+		title = "Number of waves";
+		values[] = {2, 3, 4, 5, 6};
+		texts[] = {"2","3","4","5","6"};
+		default = 4;
+	};
+    class WaveTime
+	{
+		title = "Wave time modifier";
+		values[] = {0.25, 0.5, 1, 1.25, 1.5};
+		texts[] = {"Very short","Short","Normal","Longer","Very long"};
+		default = 1;
+	};
+    class Weather
+    {
+        title = "Weather";
+        values[] = {0,0.55,1};
+        texts[] = {"Clear", "Cloudy", "Raining"};
+        default = 0.55;
+        function = "BIS_fnc_setOvercast";
+    };
+};
