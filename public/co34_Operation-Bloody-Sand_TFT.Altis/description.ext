@@ -1,0 +1,207 @@
+onLoadName = "Operation Bloody Sand";
+author = "S-3 @ TFT8 edits of FF Studio release";
+loadScreen =  "pics\isis_titleFFS.jpg";
+onLoadMission="Islamic State fighters seized villages on east part of Altis. Military intervention of coalition forces is necessary in this area.";
+onLoadIntroTime=false;
+onLoadMissionTime=false;
+showGPS = 1;
+respawn = "BASE";
+respawndelay = 1;
+disabledAI = 1;
+enableDebugConsole = 1;
+
+// Mission Header
+class Header
+{
+	gameType = Coop;            //DM, Team, Coop, ...
+	minPlayers = 1;             //min # of players the mission supports
+	maxPlayers = 34;            //Max # of players the mission supports
+};
+
+// INTRO
+#include "scripts\Intro.hpp"
+
+// DEBUG CONSOLE
+#include "dlg_debug\dlg_debug.hpp"
+
+// VIRTUAL AMMOBOX SYSTEM (VAS)
+#include "VAS\menu.hpp"
+
+// REVIVE SCRIPT
+#include "=BTC=_revive\=BTC=_respawn.h"
+
+// CH VIEW DISTANCE SCRIPT
+#include "CHVD\dialog.hpp"
+
+class CfgFunctions
+{
+	#include "VAS\cfgfunctions.hpp"
+    #include "CHVD\CfgFunctions.hpp"
+	#include "funcs\CfgFunctions.hpp"
+};
+
+class Params
+{
+	class game_difficulty	{
+			title = "Difficulty";
+			values[] = {0,1,2,3,4};
+			texts[] = {"No skill","Easy","Normal","Hard","Extreme"};
+			default = 2;
+	};
+	class FFS_VAS	{
+			title = "Contain of Ammo Boxes";
+			values[] = {0,1,2};
+			texts[] = {"Standard (free loadout in ammo box)","Virtual Ammo System + Virtual Arsenal","Characters (pre-defined loadout)"};
+			default = 1;
+	};
+	class FFS_HOURS	{
+			title = "Time of Day";
+			values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
+			texts[] = {"00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"};
+			default = 7;
+	};
+	class FFS_REVIVE	{
+			title = "Revive";
+			values[] = {0,1};
+			texts[] = {"Disabled","Enabled"};
+			default = 1;
+	};
+	class FFS_WHO_REVIVE	{
+			title = "Revive - Who can revive";
+			values[] = {0,1};
+			texts[] = {"All","Medic"};
+			default = 0;
+	};
+	class FFS_LIFES	{
+			title = "Revive - Lifes";
+			values[] = {0,1,2,3,4,5};
+			texts[] = {"Infinite","1","3","5","10","15"};
+			default = 0;
+	};
+	class FFS_RESP_TIME	{
+			title = "Revive - Respawn time";
+			values[] = {0,1,2,3,4,5};
+			texts[] = {"1","5","15","30","60","120"};
+			default = 4;
+	};
+	class FFS_RESP_MOBILE	{
+			title = "Revive - Mobile respawn";
+			values[] = {0,1};
+			texts[] = {"Disable","Enable"};
+			default = 1;
+	};
+	class COUNT_TASKS	{
+			title = "Number of tasks";
+			values[] = {1,2,3,4,5,6,7,8};
+			texts[] = {"1","2","3","4","5","6","7","8"};
+			default = 5;
+	};
+	class debug_mode	{
+			title = "Debug Mode / Logging";
+			values[] = {0,1,2};
+			texts[] = {"OFF / OFF","OFF / ON","ON / ON"};
+			default = 0;
+	};
+	class playIntroISIS	{
+			title = "Play intro";
+			values[] = {0,1};
+			texts[] = {"NO","YES"};
+			default = 0;
+	};
+		class timeacc	{
+		title = "Time Speed";
+		values[] = {1,2,5,10};
+		texts[] = {"1x","2x","5x","10x"};
+		default = 2;
+		function = "BIS_fnc_paramTimeAcceleration";
+	};
+};
+
+class CfgSounds
+{
+	class telegraph
+	{
+		name = "telegraph";
+		sound[] = {"sound\telegraph.ogg", 1, 0.85};
+		titles[] = {	};
+	};	
+	class Islamic_music
+	{
+		name = "Islamic_music";
+		sound[] = {"sound\Islamic_music.ogg", 1, 1.00};
+		titles[] = {	};
+	};
+	class Allah_Akbar1
+	{
+		name = "Allah_Akbar1";
+		sound[] = {"sound\Allah_Akbar1.ogg", 1, 0.9};
+		titles[] = {	};
+	};	
+	class Allah_Akbar2
+	{
+		name = "alah2";
+		sound[] = {"sound\Allah_Akbar2.ogg", 1, 1.0};
+		titles[] = {	};
+	};
+	class Allah_Akbar3
+	{
+		name = "alah3";
+		sound[] = {"sound\Allah_Akbar3.ogg", 1, 1.1};
+		titles[] = {	};
+	};
+	class Allah_Akbar4
+	{
+		name = "alah4";
+		sound[] = {"sound\Allah_Akbar4.ogg", 1, 1.1};
+		titles[] = {	};
+	};
+	class Allah_Akbar5
+	{
+		name = "alah5";
+		sound[] = {"sound\Allah_Akbar5.ogg", 0.8, 1.0};
+		titles[] = {	};
+	};
+	class intro_sound
+	{
+		name = "intro_sound";
+		sound[] = {"sound\Intro_sound.ogg", 1.0, 1.0};
+		titles[] = {	};
+	};	
+};
+
+// c1 setIdentity "John_Fowler";
+class CfgIdentities
+{
+	class John_Fowler
+    {
+        name = "John Fowler";
+        face = "WhiteHead_20";	//whiteHead_01,PersianHead_A3_01
+        glasses = "";
+        speaker = "Male01ENGVR";
+        pitch = 1;
+    };
+};
+
+class cfgDebriefing
+{
+   class endMission1
+   {
+      title = "MISSION COMPLETED";
+      subtitle = "Well done, soldiers!";
+      description = "ISIS has been defeated!";
+      backgroundPicture = "pics\isis_titleFFS.jpg";
+      picture = "";
+      pictureColor[] = {0.0,0.3,0.6,1};
+   };
+}; 
+
+class CfgUnitInsignia
+{
+	class FFS_ISIS
+	{
+		displayName = "Armed forces of Islamic State"; // Name displayed in Arsenal
+		author = "ISIS"; // Author displayed in Arsenal
+		texture = "pics\ISIS_insignia.jpg"; // Image path
+		textureVehicle = ""; // Does nothing currently, reserved for future use
+	};
+};

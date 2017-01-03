@@ -1,0 +1,17 @@
+TODO
+
+
+*******************************************************
+	co34 Operation Bloody Sand
+*******************************************************
+
+ ==========  version 1.01 (14.04.2015) ==========  
+- change offroad class to "O_G_Offroad_01_armed_F"
+- change default parameter "Number of tasks" to 6 from 4
+- remove sidechats from randomPatrol.sqf script
+- change of counting units to surrender in clear area tasks (vehicles included)
+- add more units in towns
+- intro can be skipped in parameters of mission
+
+ ==========  version 1.00 (22.03.2015) ==========  
+- first public release

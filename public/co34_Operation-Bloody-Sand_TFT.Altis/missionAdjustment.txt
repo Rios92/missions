@@ -1,0 +1,17 @@
+EDITOR
+intel (mission name, weather, ...)
+
+DESCRIPTION.EXT
+-onLoadName
+-loadScreen
+-onLoadMission
+-maxPlayers
+-cfgDebriefing >> endMission1 >> description
+-cfgDebriefing >> endMission1 >> backgroundPicture
+
+INTRO.HPP
+-RscTitles >> IntroTxt >> IntroTxt >> text
+
+INIT.SQF
+-vehOnMap
+- 
