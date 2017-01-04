@@ -15,7 +15,6 @@ true spawn {
 
     _pilot160 = ["76561198026430713"];
     if (getPlayerUID player in _pilot160) exitWith {};
-    
     _iampilot = ({typeOf player == _x} count _pilots) > 0;
 
     while { true } do {
