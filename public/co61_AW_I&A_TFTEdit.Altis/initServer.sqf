@@ -50,5 +50,3 @@ _null = [] execVM "scripts\misc\clearItemsBASE.sqf";													// clear items 
 _null = [] execVM "scripts\misc\islandConfig.sqf";														// prep the island for mission
 _null = [] execVM "scripts\misc\UAVfix.sqf";															// attempt UAV fix
 if (PARAMS_EasterEggs == 1) then { _null = [] execVM "scripts\easterEggs.sqf"; };						// Spawn easter eggs around the island
-
-_null = [] execVM "scripts\haloCheck.sqf";

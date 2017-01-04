@@ -6,8 +6,6 @@ Adapted SaMatra's code published on:
 http://forums.bistudio.com/showthread.php?157481-crewmen
 */
 
-
-
 true spawn {
 
     _pilots = ["B_Helipilot_F"];
@@ -15,9 +13,6 @@ true spawn {
 
     waitUntil {player == player};
 
-	_pilot160 = ["76561198026430713"];
-	if (getPlayerUID player in _pilot160) exitWith {};
-	
     _iampilot = ({typeOf player == _x} count _pilots) > 0;
 
     while { true } do {
