@@ -111,45 +111,45 @@ fnc_setVehicleVarName = {
 
 // Start monitoring the vehicle   
 while {_run} do 
-{	
-	sleep (2 + random 10);
-     	if ((getDammage _unit > 0.8) and ({alive _x} count crew _unit == 0)) then {_dead = true};
+{    
+    sleep (2 + random 10);
+         if ((getDammage _unit > 0.8) and ({alive _x} count crew _unit == 0)) then {_dead = true};
 
-	// Check if the vehicle is deserted.
-	if (_deserted > 0) then
-	{
-		if ((getPosASL _unit distance _position > 10) and ({alive _x} count crew _unit == 0) and (getDammage _unit < 0.8)) then 
-		{
-			_timeout = time + _deserted;
-			sleep 0.1;
-		 	waitUntil {_timeout < time or !alive _unit or {alive _x} count crew _unit > 0};
-			if ({alive _x} count crew _unit > 0) then {_dead = false}; 
-			if ({alive _x} count crew _unit == 0) then {_dead = true; _nodelay =true}; 
-			if !(alive _unit) then {_dead = true; _nodelay = false}; 
-		};
-	};
+    // Check if the vehicle is deserted.
+    if (_deserted > 0) then
+    {
+        if ((getPosASL _unit distance _position > 10) and ({alive _x} count crew _unit == 0) and (getDammage _unit < 0.8)) then 
+        {
+            _timeout = time + _deserted;
+            sleep 0.1;
+             waitUntil {_timeout < time or !alive _unit or {alive _x} count crew _unit > 0};
+            if ({alive _x} count crew _unit > 0) then {_dead = false}; 
+            if ({alive _x} count crew _unit == 0) then {_dead = true; _nodelay =true}; 
+            if !(alive _unit) then {_dead = true; _nodelay = false}; 
+        };
+    };
 
-	// Respawn vehicle
+    // Respawn vehicle
       if (_dead) then 
-	{	
-		if (_nodelay) then {sleep 0.1; _nodelay = false;} else {sleep _delay;};
-		if (_dynamic) then {_position = getPosASL _unit; _dir = getDir _unit;};
-		sleep 0.1;
+    {    
+        if (_nodelay) then {sleep 0.1; _nodelay = false;} else {sleep _delay;};
+        if (_dynamic) then {_position = getPosASL _unit; _dir = getDir _unit;};
+        sleep 0.1;
 
-		deleteVehicle _unit;
-		sleep 2;
-		_unit = _type createVehicle _position;
-		_unit setPosASL _position;
-		_unit setDir _dir;
+        deleteVehicle _unit;
+        sleep 2;
+        _unit = _type createVehicle _position;
+        _unit setPosASL _position;
+        _unit setDir _dir;
 
-		if (_haveinit) then {[[netID _unit, _unitinit], "fnc_setVehicleInit", true, true] spawn BIS_fnc_MP;};
+        if (_haveinit) then {[[netID _unit, _unitinit], "fnc_setVehicleInit", true, true] spawn BIS_fnc_MP;};
 
-		if (_hasname) then {[[netID _unit, _unitname], "fnc_setVehicleVarName", true, true] spawn BIS_fnc_MP;};
+        if (_hasname) then {[[netID _unit, _unitname], "fnc_setVehicleVarName", true, true] spawn BIS_fnc_MP;};
 
-		_dead = false;
+        _dead = false;
 
-		// Check respawn amount
-		if !(_noend) then {_rounds = _rounds + 1};
-		if ((_rounds == _respawns) and !(_noend)) then {_run = false;};
-	};
+        // Check respawn amount
+        if !(_noend) then {_rounds = _rounds + 1};
+        if ((_rounds == _respawns) and !(_noend)) then {_run = false;};
+    };
 };
