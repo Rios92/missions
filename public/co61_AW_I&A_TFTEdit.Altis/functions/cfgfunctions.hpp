@@ -31,5 +31,6 @@ class QS
 		class removeAction0 {};
 		class removeAction1 {};
 		class serverMapTP {};
+		class pingCurator;
 	};
 };

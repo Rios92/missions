@@ -13,6 +13,9 @@ true spawn {
 
     waitUntil {player == player};
 
+    _pilot160 = ["76561198026430713"];
+    if (getPlayerUID player in _pilot160) exitWith {};
+    
     _iampilot = ({typeOf player == _x} count _pilots) > 0;
 
     while { true } do {
@@ -23,24 +26,22 @@ true spawn {
             _veh = vehicle player;
 
             //------------------------------ pilot can be pilot seat only
-			
             if((_veh isKindOf "Helicopter" || _veh isKindOf "Plane") && !(_veh isKindOf "ParachuteBase")) then {
-				if(({typeOf _veh == _x} count _aircraft_nocopilot) > 0) then {
-					_forbidden = [_veh turretUnit [0]];
-					if(player in _forbidden) then {
-						systemChat "Co-pilot is disabled on this vehicle";
-						player action ["getOut", _veh];
-					};
-				};
-				if(!_iampilot) then {
-					_forbidden = [driver _veh];
-					if(player in _forbidden) then {
-						systemChat "You must be a pilot to fly this aircraft";
-						player action ["getOut", _veh];
-					};
-				};
+                if(({typeOf _veh == _x} count _aircraft_nocopilot) > 0) then {
+                    _forbidden = [_veh turretUnit [0]];
+                    if(player in _forbidden) then {
+                        systemChat "Co-pilot is disabled on this vehicle";
+                        player action ["getOut", _veh];
+                    };
+                };
+                if(!_iampilot) then {
+                    _forbidden = [driver _veh];
+                    if(player in _forbidden) then {
+                        systemChat "You must be a pilot to fly this aircraft";
+                        player action ["getOut", _veh];
+                    };
+                };
             };
-		};
+        };
     };
-}; 
-
+};
