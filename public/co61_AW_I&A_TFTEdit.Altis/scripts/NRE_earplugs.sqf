@@ -3,7 +3,6 @@ Script name:    NRE_earplugs.sqf
 Created on:        03.06.2015 (06/03/2015)
 Author:            NemesisRE
 Author website:    http://nrecom.net
-
 Description:    Adds action to insert/remove Earplugs (toggles).
 */
 

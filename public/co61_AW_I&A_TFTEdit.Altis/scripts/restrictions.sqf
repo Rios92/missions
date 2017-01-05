@@ -13,7 +13,6 @@ Quiksilver notes:
 
 [] spawn {
     while { true } do {
-
     //------------------------------------- Launchers
         if ((player hasWeapon "launch_NLAW_F") || (player hasWeapon "launch_B_Titan_F") || (player hasWeapon "launch_O_Titan_F") || (player hasWeapon "launch_I_Titan_F") || (player hasWeapon "launch_B_Titan_short_F") || (player hasWeapon "launch_O_Titan_short_F") || (player hasWeapon "launch_I_Titan_short_F") || (player hasWeapon "launch_B_Titan_short_tna_F") || (player hasWeapon "launch_B_Titan_tna_F") || (player hasWeapon "launch_O_Titan_ghex_F") || (player hasWeapon "launch_O_Titan_short_ghex_F")) then
         {
@@ -49,5 +48,6 @@ Quiksilver notes:
             };
         };
         sleep 5;
+
     } forEach playableUnits;    // original: foreach allUnits;
 };
