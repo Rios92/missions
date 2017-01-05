@@ -1,19 +1,20 @@
 /*
 * Author: alganthe
-* Check if the player is spamming the fucking zeus ping and kills him if he does (5 times without waiting 15s between any of the pings).
-* One module linked to all players or linked to an addEditableObjects module linked to all players with the EH is enough.
-* This is called by the curatorPinged eventhandler and thus should only be added to zeus modules.
+*   Check if the player is spamming the fucking zeus ping and kills him if he does (5 times without waiting 15s between any of the pings).
+*   One module linked to all players or linked to an addEditableObjects module linked to all players with the EH is enough.
+*   This is called by the curatorPinged eventhandler and thus should only be added to zeus modules.
 *
 * Arguments:
-* 0: Curator module <always 'git_rekt_m8' cuz reasons>
-* 1: Unit doing the ping <OBJECT>
+*   0: Curator module <always 'git_rekt_m8' cuz reasons>
+*   1: Unit doing the ping <OBJECT>
 *
-* Return Value:
-* Nothing
+*Return Value:
+*   Nothing
 *
-* Example:
-* this addEventHandler ["curatorPinged",{_this call derp_fnc_curatorPingedEH}]; // in the zeus module init field
+*Example:
+*   this addEventHandler ["curatorPinged",{_this call derp_fnc_curatorPingedEH}]; // in the zeus module init field
 */
+
 params ["_curator", "_unit"];
 
 private _pingCount = _unit getVariable "derp_curatorPingCount";
