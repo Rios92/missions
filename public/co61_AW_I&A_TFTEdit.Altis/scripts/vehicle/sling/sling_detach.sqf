@@ -1,7 +1,7 @@
 _helo = _this select 0;
 
 _unit = (_helo getVariable "sling_object");
-	
+
 _minY = (((boundingBox _unit) select 0) select 2);
 
 if((((getPos _unit select 2) + 2.4) + _minY)  < 0) exitWith {hint "Too Low To Release"};

@@ -1,17 +1,17 @@
 _vehicle = _this select 0;
 
 _pitchBank = {
-	private["_obj","_p","_b","_vx","_vy","_vz","_v"];
-	 _obj = _this select 0;
-	 _p = _this select 1;
-	 _b = _this select 2;
-	 _obj setVectorUp [0,0.001,0.999];
-	 _obj setVectorDir [0,0.999,0.001];
-	 _vx = (sin _b) * (cos _p);
-	 _vz = -(sin _p);
-	 _vy = (cos _b) * (cos _p);
-	 _v = [_vx,_vz,_vy];
-	 _obj setVectorUp _v;
+    private["_obj","_p","_b","_vx","_vy","_vz","_v"];
+     _obj = _this select 0;
+     _p = _this select 1;
+     _b = _this select 2;
+     _obj setVectorUp [0,0.001,0.999];
+     _obj setVectorDir [0,0.999,0.001];
+     _vx = (sin _b) * (cos _p);
+     _vz = -(sin _p);
+     _vy = (cos _b) * (cos _p);
+     _v = [_vx,_vz,_vy];
+     _obj setVectorUp _v;
 };
 
 _check = _vehicle getVariable "sling_attached";
@@ -22,7 +22,7 @@ _vehicle addAction ["<t color='#FF0000'>" + "Sling Rope Attach" + "</t>","script
 _vehicle addAction ["<t color='#FF0000'>" + "Sling Rope Detach" + "</t>","scripts\vehicle\sling\sling_detach.sqf",[],21,true,true,"","(_this == driver _target) AND (_target getVariable 'sling_attached')"];
 _vehicle addAction ["<t color='#FF0000'>" + "Toggle Sling Camera" + "</t>","scripts\vehicle\sling\sling_toggleDisplay.sqf",[],-98,false,false,"","(_this == driver _target)"];
 
-//camera stuff (only visible to pilot (hopefully));
+                        //camera stuff (only visible to pilot (hopefully));
 _camera = "camera" camcreate [0,0,0];
 
 _minZ = (((boundingBox _vehicle) select 0) select 2) - 1;
