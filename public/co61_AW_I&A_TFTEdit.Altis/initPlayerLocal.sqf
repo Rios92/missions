@@ -9,11 +9,10 @@ Last modified:
 Description:
     Client scripts and event handlers.*/
 
-enableSentences false;                                                            
+enableSentences false;
 
 //------------------- client executions
 _null = [] execvm "scripts\vehicle\crew\crew.sqf";                                 // vehicle HUD
-_null = [] execVM "scripts\group_manager.sqf";                                    // group manager
 _null = [] execVM "scripts\restrictions.sqf";                                     // gear restrictions
 _null = [] execVM "scripts\pilotCheck.sqf";                                     // pilots only
 _null = [] execVM "scripts\safezone.sqf";                                         // spawn protection
@@ -64,3 +63,5 @@ _null = [] execVM "scripts\playerMarkers.sqf";                                  
     "priorityCircle" setMarkerPosLocal (markerPos "priorityCircle");
     "priorityMarker" setMarkerTextLocal format["Priority Target: %1",priorityTargetText];
 };
+
+["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups; // Initializes the player/client side Dynamic Groups framework and registers the player group

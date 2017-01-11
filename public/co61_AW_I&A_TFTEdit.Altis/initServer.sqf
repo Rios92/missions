@@ -20,7 +20,7 @@ Credit:
 
     Please be respectful and do not remove/alter credits. */
 
-enableSaving [false, false];    
+enableSaving [false, false];
 
 //------------------------------------------------ Handle parameters
 for [ {_i = 0}, {_i < count(paramsArray)}, {_i = _i + 1} ] do {
@@ -44,3 +44,5 @@ _null = [] execVM "scripts\misc\UAVfix.sqf";                                    
 if (PARAMS_EasterEggs == 1) then { _null = [] execVM "scripts\easterEggs.sqf"; };                        // Spawn easter eggs around the island
 
 _null = [] execVM "scripts\haloCheck.sqf";
+
+["Initialize", [true]] call BIS_fnc_dynamicGroups; // Initializes the Dynamic Groups framework and groups led by a player at mission start will be registered
