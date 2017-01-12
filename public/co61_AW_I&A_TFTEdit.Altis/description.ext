@@ -1,6 +1,6 @@
 /*  Authors:
-    Invade & Annex 2.00 was developed by 
-        Rarek [ahoyworld.co.uk] with hundreds of hours of work, 
+    Invade & Annex 2.00 was developed by
+        Rarek [ahoyworld.co.uk] with hundreds of hours of work,
     Later iterations have been developed by 
         Quiksilver with hundreds of hours of work.
         Contributors: Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS]
@@ -11,10 +11,10 @@
 File Reference: https://community.bistudio.com/wiki/Description.ext */
 //------------------------- On Load
 author = Quiksilver [allFPS];                                      // Visible when loading mission
-onLoadName = "Invade & Annex 2.75tftv2";                           // Visible when loading mission
+onLoadName = "Invade & Annex 2.75tftv3";                           // Visible when loading mission
 OnLoadMission = "Original mission by allFPS, edits by TFT8";
 loadScreen = "media\images\loading.jpg";                           // Visible when loading mission
-overviewPicture = "media\images\loading.jpg";                      // Visible when selecting mission    
+overviewPicture = "media\images\loading.jpg";                      // Visible when selecting mission
 onLoadIntro = "Welcome to Task Force Tempor 8";                    // Displays a message while the intro is loading.
 onLoadIntroTime = 0;                                               // Time and date displayed while the intro loads. 1 visible, 0 hidden.
 onLoadMissionTime = 0;                                             // Time and date displayed while the mission loads. 1 visible, 0 hidden.
@@ -30,7 +30,7 @@ enableDebugConsole = 1;                                            // 0 = disabl
 allowFunctionsLog = 0;                                             // Log functions to .rpt. disabled with 0
 
 //------------------------- Misc
-disableChannels[]= {{0,false,true}, {2,true,true}, {6,true,true}}; // {CHANNEL,VON,CHAT} 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global. 
+disableChannels[]= {{0,false,true}, {2,true,true}, {6,true,true}}; // {CHANNEL,VON,CHAT} 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global.
 disabledAI = 1;                                                    // No AI in playable units
 aiKills = 0;                                                       // disable scorelist for AI players
 enableItemsDropping = 0;                                           // disabled with 0
@@ -46,7 +46,7 @@ RespawnDialog = 0;                                                 // default = 
 wreckLimit = 3;                                                    // Limit before removal is triggered
 wreckRemovalMinTime = 120;                                         // Min time before removal
 wreckRemovalMaxTime = 360;                                         // Max time before removal
-corpseLimit = 5;                                                   // Limit before removal is triggered        
+corpseLimit = 5;                                                   // Limit before removal is triggered
 corpseRemovalMinTime = 60;                                         // Min time before removal
 corpseRemovalMaxTime = 120;                                        // Max time before removal
 
@@ -55,7 +55,7 @@ corpseRemovalMaxTime = 120;                                        // Max time b
 #include "scripts\taw_vd\dialog.hpp"                               // TAW View Distance
 #include "scripts\vehicle\crew\common.hpp"                         // vehicle crew hud
 #include "scripts\spectator\spectating.hpp"                        // Kegetys Spectator Script
-#include "scripts\=BTC=_revive\=BTC=_respawn.h"                    // BTC medic revive system 
+#include "scripts\=BTC=_revive\=BTC=_respawn.h"                    // BTC medic revive system
 
 class CfgFunctions {
     #include "functions\cfgfunctions.hpp"                          // Integrated I&A functions
