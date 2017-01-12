@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={14644.119,125.6498,16753.213};
-		dir[]={-0.45989344,-0.76500738,0.45089129};
-		up[]={-0.54628855,0.64397937,0.5355953};
-		aside[]={0.7001009,2.3562461e-007,0.71407551};
+		dir[]={-0.18225771,-0.96441418,0.19167458};
+		up[]={-0.66456133,0.26439238,0.69889849};
+		aside[]={0.72470742,9.95351e-007,0.68909907};
 	};
 };
 binarizationWanted=0;
@@ -309,7 +309,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Co-40 AW Invade & Annex TFT";
-		overviewText="Version 2.75.31.1 TFT1.0";
+		overviewText="Version 2.75 TFTv3";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;

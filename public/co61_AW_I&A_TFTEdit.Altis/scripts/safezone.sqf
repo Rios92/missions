@@ -1,11 +1,12 @@
 /*
-GrenadeStop v0.8 for ArmA 3 Alpha
+GrenadeStop v0.8
 
 AUTHOR:
-    Bake (tweaked slightly by Rarek)
+    Bake
+    Modified by FitzGerald [TFT8], YoursTruly [TFT8]
 
 DESCRIPTION:
-    Stops players from throwing grenades and firing weapons in safety zones. Does not prevent vehicles firing.
+    Stops players from throwing grenades and firing weapons in safety zones.
 
 CONFIGURATION:
     Edit the #defines below.
@@ -21,5 +22,4 @@ player addEventHandler ["FiredMan", {
         deleteVehicle (_this select 6);
         "Go give it to the enemy!" hintC MESSAGE;
     };
-}
-];
+}];
