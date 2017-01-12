@@ -37,7 +37,10 @@ while { true } do {
 
         {deleteVehicle _x;} count (allMissionObjects "CraterLong");
         sleep 1;
-        
+
+        {deleteVehicle _x;} count (allMissionObjects "CraterLong_small");
+        sleep 1;
+
         {deleteVehicle _x;} count (allMissionObjects "WeaponHolder");
         sleep 10;
 
