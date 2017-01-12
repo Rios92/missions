@@ -1,3 +1,14 @@
+/*  Authors:
+    Invade & Annex 2.00 was developed by 
+        Rarek [ahoyworld.co.uk] with hundreds of hours of work, 
+    Later iterations have been developed by 
+        Quiksilver with hundreds of hours of work.
+        Contributors: Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS]
+    TFT8 Modifications made by: YoursTruly, FitzGerald, Frankie
+
+    Please be respectful and do not remove/alter credits.
+
+File Reference: https://community.bistudio.com/wiki/Description.ext */
 //------------------------- On Load
 author = Quiksilver [allFPS];                                      // Visible when loading mission
 onLoadName = "Invade & Annex 2.75tftv2";                           // Visible when loading mission
@@ -11,7 +22,7 @@ onLoadMissionTime = 0;                                             // Time and d
 class Header {
     gameType = COOP;                                               // Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
     minPlayers = 1;                                                // Min # of players the MISSION supports
-    maxPlayers = 59;                                               // Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
+    maxPlayers = 60;                                               // Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
 };
 
 //------------------------- Admin
@@ -98,7 +109,7 @@ class Params {
         title = "Chance for minefield to spawn around Radio Tower?";
         values[] = {0,1,2,3,4,5,6,7,8,9,11};
         texts[] = {"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 5; // default 5
+        default = 3; // default 5
     };
 
     class ArtilleryTargetTickTimeMin {
@@ -131,8 +142,8 @@ class Params {
 
     class VehicleRespawnDistance {
         title = "Distance from players that vehicles won't respawn";
-        values[] = {10,50,100,200,300,400,500,1000,2000,5000,10000};
-        texts[] = {"10m","50m","100m","200m","300m","400m","500m","1km","2km","5km","10km"};
+        values[] = {100,200,300,400,500,750,1000,2000,5000};
+        texts[] = {"100m","200m","300m","400m","500m","750m","1km","2km","5km"};
         default = 500;
     };
 
@@ -161,14 +172,14 @@ class Params {
         title = "Overwatch teams in the AO";
         values[] = {0,1,2,3,4,5,6,7};
         texts[] = {1,2,3,4,5,6,7,8};
-        default = 5; // default 6
+        default = 4; // default 6
     };
 
     class VEHPatrol {
         title = "Vehicles Patrolling AO";
         values[] = {0,1,2,3,4,5,6};
         texts[] = {1,2,3,4,5,6,7};
-        default = 6; // default 2
+        default = 4; // default 2
     };
 
     class AAPatrol {
@@ -182,7 +193,7 @@ class Params {
         title = "% Chance Of Air Vehicles Patrolling AO";
         values[] = {0,1,2,3,4,5,6,7,8,9,10};
         texts[] = {0,10,20,30,40,50,60,70,80,90,100};
-        default = 6; // default 7
+        default = 5; // default 7
     };
 
     class EasterEggs {
@@ -361,19 +372,3 @@ class CfgSounds {
     class Vent2 {name="Vent2";sound[]={ATM_airdrop\data\Vent2.ogg,db-11,1.0};titles[] = {};};
     class Para {name="Para";sound[]={ATM_airdrop\data\parachute.ogg,db-11,1.0};titles[] = {};};
 };
-
-
-/*
-Authors: 
-    Invade & Annex 2.00 was developed by 
-        Rarek [ahoyworld.co.uk] with hundreds of hours of work, 
-    The current iterations have been developed by 
-        Quiksilver with hundreds of hours of work.
-
-    Contributors: Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS].
-    www.allfps.com.au
-
-    Please be respectful and do not remove/alter credits.
-
-File Reference: 
-    https://community.bistudio.com/wiki/Description.ext */
