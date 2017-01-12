@@ -5,9 +5,11 @@ while {true} do {
     };
     if (_pilots >= 3) then {
         haloFlag hideObjectGlobal true;
+        systemChat "Pilots on station, HALO unavailable at BASE";
     }
     else {
         haloFlag hideObjectGlobal false;
+        systemChat "HALO now available at BASE";
     };
-    uiSleep 300;
+    uiSleep 200;
 };
