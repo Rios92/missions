@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14790.201,249.9953,16643.873};
-		dir[]={-0.24399453,-0.93836355,0.24488625};
-		up[]={-0.66232121,0.34562293,0.66474164};
-		aside[]={0.70840925,4.2293686e-007,0.70582801};
+		pos[]={14644.119,125.6498,16753.213};
+		dir[]={-0.45989344,-0.76500738,0.45089129};
+		up[]={-0.54628855,0.64397937,0.5355953};
+		aside[]={0.7001009,2.3562461e-007,0.71407551};
 	};
 };
 binarizationWanted=0;
@@ -13528,7 +13528,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="_vec = _this select 0; _vec setPosATL [getPosATL _vec select 0; getPosATL _vec select 1, 0.7]; _vec setDamage 0";
+							value="_vec = _this select 0; _vec setPosATL [getPosATL _vec select 0, getPosATL _vec select 1, 0.7]; _vec setDamage 0";
 						};
 					};
 				};
@@ -14010,6 +14010,7 @@ class Mission
 				};
 			};
 			id=593;
+			atlOffset=-0.011573792;
 		};
 		class Item510
 		{
@@ -14030,6 +14031,7 @@ class Mission
 			};
 			id=594;
 			type="B_APC_Tracked_01_AA_F";
+			atlOffset=-0.011573792;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14171,6 +14173,7 @@ class Mission
 				};
 			};
 			id=599;
+			atlOffset=-0.0022888184;
 		};
 		class Item512
 		{
@@ -14191,6 +14194,7 @@ class Mission
 			};
 			id=600;
 			type="B_APC_Tracked_01_AA_F";
+			atlOffset=-0.0022888184;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14547,10 +14551,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={14159.616,18.963375,16323.036};
+				position[]={14159.616,18.963377,16323.036};
 			};
 			id=617;
 			type="ModuleRespawnVehicle_F";
+			atlOffset=1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14587,7 +14592,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[this addAction [""Arsenal"", {[""Open"",true] spawn BIS_fnc_arsenal}]; this addAction [""Virtual Ammobox System"", ""VAS\open.sqf""];]";
+							value="this addAction [""Arsenal"", {[""Open"",true] spawn BIS_fnc_arsenal}]; this addAction [""Virtual Ammobox System"", ""VAS\open.sqf""];";
 						};
 					};
 				};
@@ -15220,7 +15225,7 @@ class Mission
 			};
 			id=646;
 			type="Land_HBarrierBig_F";
-			atlOffset=0.0020008087;
+			atlOffset=0.0020027161;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15308,7 +15313,7 @@ class Mission
 			};
 			id=648;
 			type="Land_HBarrierBig_F";
-			atlOffset=0.0020008087;
+			atlOffset=0.0020027161;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15484,7 +15489,7 @@ class Mission
 			};
 			id=652;
 			type="Land_HBarrierBig_F";
-			atlOffset=0.0020027161;
+			atlOffset=0.0020046234;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16020,7 +16025,7 @@ class Mission
 			};
 			id=695;
 			type="Land_HBarrierBig_F";
-			atlOffset=0.045255661;
+			atlOffset=0.045256615;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16110,7 +16115,7 @@ class Mission
 			};
 			id=697;
 			type="Land_HBarrierBig_F";
-			atlOffset=0.010667801;
+			atlOffset=0.010669708;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16155,7 +16160,7 @@ class Mission
 			};
 			id=698;
 			type="Land_HBarrierBig_F";
-			atlOffset=0.022575378;
+			atlOffset=0.022577286;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16335,7 +16340,7 @@ class Mission
 			};
 			id=702;
 			type="Land_HBarrierBig_F";
-			atlOffset=-0.00065231323;
+			atlOffset=-0.00065040588;
 			class CustomAttributes
 			{
 				class Attribute0

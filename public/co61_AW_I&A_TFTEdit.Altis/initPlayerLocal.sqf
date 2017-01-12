@@ -12,14 +12,16 @@ Description:
 enableSentences false;
 
 //------------------- client executions
-_null = [] execvm "scripts\vehicle\crew\crew.sqf";                                 // vehicle HUD
-_null = [] execVM "scripts\restrictions.sqf";                                     // gear restrictions
-_null = [] execVM "scripts\pilotCheck.sqf";                                     // pilots only
-_null = [] execVM "scripts\safezone.sqf";                                         // spawn protection
-_null = [] execVM "scripts\jump.sqf";                                            // jump action
-_null = [] execVM "scripts\misc\diary.sqf";                                        // diary tabs
-_null = [] execVM "scripts\vehicle\fastrope\zlt_fastrope.sqf";                    // heli rope
-_null = [] execVM "scripts\playerMarkers.sqf";                                    // blufor map tracker
+_null = [] execvm "scripts\vehicle\crew\crew.sqf";                                  // vehicle HUD
+_null = [] execVM "scripts\restrictions.sqf";                                       // gear restrictions
+_null = [] execVM "scripts\pilotCheck.sqf";                                         // pilots only
+_null = [] execVM "scripts\jump.sqf";                                               // jump action
+_null = [] execVM "scripts\misc\diary.sqf";                                         // diary tabs
+_null = [] execVM "scripts\vehicle\fastrope\zlt_fastrope.sqf";                      // heli rope
+_null = [] execVM "scripts\playerMarkers.sqf";                                      // blufor map tracker
+_null = [] execVM "scripts\safezone.sqf";                                           // SafeZone.
+
+["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;                    // Initializes the player/client side Dynamic Groups framework and registers the player group
 
 //-------------------- PVEHs
 "showNotification" addPublicVariableEventHandler {
@@ -63,5 +65,3 @@ _null = [] execVM "scripts\playerMarkers.sqf";                                  
     "priorityCircle" setMarkerPosLocal (markerPos "priorityCircle");
     "priorityMarker" setMarkerTextLocal format["Priority Target: %1",priorityTargetText];
 };
-
-["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups; // Initializes the player/client side Dynamic Groups framework and registers the player group
