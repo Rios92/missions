@@ -2,10 +2,15 @@
 File:       =ATM= Airdrop
 Author:     =ATM=Pokertour
 version:    6.5
-date:       28/12/2015
+date:       2017/1/12
 visit:      atmarma.fr
 */
 
+//----------------------------------------// Pilot Count Check
+if( ({typeOf _x == "B_Helipilot_F"} count allPlayers) > 2 ) exitWith {
+    titleText ["HALO currently unavailable, Pilots on station", "BLACK IN", 4]
+};
+//-----------------------------------------Script to run if Pilot Count is low
 private ["_position","_cut","_dialog","_s_alt","_s_alt_text","_sound","_sound2","_soundPath"];
     waitUntil { !isNull player };
 //[] execVM "ATM_airdrop\functions.sqf";
