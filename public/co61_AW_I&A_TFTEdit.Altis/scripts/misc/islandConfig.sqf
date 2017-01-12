@@ -13,7 +13,7 @@ Notes:
     _annoyingLamp2 = [0,0,0] nearestObject 493984;];
 
 the below doesnt seem to work in MP as of ArmA 1.18.
-_ruins1 = nearestObject [[14520,16705,18],"Land_Airport_Tower_ruins_F"];        
+_ruins1 = nearestObject [[14520,16705,18],"Land_Airport_Tower_ruins_F"];
 deleteVehicle _ruins1;
 ______________________________________________________________________*/
 
@@ -32,7 +32,7 @@ sleep 1;*/
 
 //======= preserve these buildings
 /* doesn't work in MP environment .. thanks BIS
-_uav1Hangar = [14342,16294,20] nearestObject 524211; 
+_uav1Hangar = [14342,16294,20] nearestObject 524211;
 _uav2Hangar = [14342,16294,20] nearestObject 524212;
 _ugvHangar = [14342,16294,20] nearestObject 524433;
 _jetHangar = [14342,16294,20] nearestObject 526049;

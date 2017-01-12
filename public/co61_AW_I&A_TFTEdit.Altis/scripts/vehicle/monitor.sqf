@@ -9,7 +9,6 @@ Quiksilver to do:
     Put this in the vehicles init line:
         veh = [this] execVM "vehicle.sqf"
 
-
     Options:
     There are some optional settings. The format for these are:
         veh = [object, Delay, Deserted timer, Respawns, Effect, Dynamic] execVM "vehicle.sqf"
