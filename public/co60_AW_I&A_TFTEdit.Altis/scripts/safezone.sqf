@@ -13,7 +13,7 @@ CONFIGURATION:
 _______________________________________________________________________*/
 
 #define SAFETY_ZONES    [["respawn_west", 150], ["respawn_pilot", 150]] // Syntax: [["marker1", radius1], ["marker2", radius2], ...]
-#define MESSAGE "Weapon use in BluFor controlled area is prohibited & a bannable offense."
+#define MESSAGE "Weapon use in BluFor controlled areas is prohibited & can get you banned."
 
 waitUntil {!isNull player};
 

@@ -9,8 +9,9 @@
     Please be respectful and do not remove/alter credits.
 
 File Reference: https://community.bistudio.com/wiki/Description.ext */
+
 //------------------------- On Load
-author = Quiksilver [allFPS];                                      // Visible when loading mission
+author = Quiksilver [allFPS], Edits by S3 @ TFT8;                                      // Visible when loading mission
 onLoadName = "Invade & Annex 2.75tftv3";                           // Visible when loading mission
 OnLoadMission = "Original mission by allFPS, edits by TFT8";
 loadScreen = "media\images\loading.jpg";                           // Visible when loading mission
