@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=16;
+		nextID=18;
 	};
 	class Camera
 	{
-		pos[]={11046.476,445.63205,11490.272};
-		dir[]={0.71006358,-0.70018584,-0.075724773};
-		up[]={0.69636112,0.71385205,-0.074266605};
-		aside[]={-0.10605361,-1.1670636e-008,-0.9944452};
+		pos[]={11026.324,367.17911,11511.146};
+		dir[]={-0.58124197,-0.54679608,0.60280114};
+		up[]={-0.37965828,0.83716345,0.39374506};
+		aside[]={0.71992838,-6.3865446e-007,0.69417876};
 	};
 };
 binarizationWanted=0;
@@ -400,11 +400,11 @@ randomSeed=5056279;
 class ScenarioData
 {
 	author="YoursTruly @  TFT8";
-	overviewText="[Coop-28]  Clear areas occupied by insurgents";
-	overviewTextLocked="[Coop-28]  Clear areas occupied by insurgents";
+	overviewText="[Coop-36]  Clear areas occupied by insurgents";
+	overviewTextLocked="[Coop-36]  Clear areas occupied by insurgents";
 	overViewPicture="images\intro.jpg";
 	overViewPictureLocked="images\intro.jpg";
-	onLoadMission="[Coop-28]  Clear areas occupied by insurgents";
+	onLoadMission="[Coop-36]  Clear areas occupied by insurgents";
 	loadScreen="images\intro.jpg";
 	debriefing=0;
 	saving=0;
@@ -415,7 +415,7 @@ class ScenarioData
 	{
 		gameType="Coop";
 		minPlayers=1;
-		maxPlayers=28;
+		maxPlayers=36;
 	};
 	wreckManagerMode=1;
 	wreckLimit=20;
@@ -722,7 +722,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="TFT Insurgency  v1.1m";
+		briefingName="TFT Insurgency  v1.2m";
 		overviewText="[Coop-28]  Clear areas occupied by insurgents";
 		timeOfChanges=1800.0002;
 		startWeather=0.42799053;
@@ -10849,7 +10849,7 @@ class Mission
 			};
 			id=957;
 			type="B_T_VTOL_01_ARMED_F";
-			atlOffset=0.0013122559;
+			atlOffset=9.1552734e-005;
 			class CustomAttributes
 			{
 				class Attribute0
