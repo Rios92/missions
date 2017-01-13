@@ -12216,6 +12216,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				name="tft_UAV";
 			};
 			id=992;
 			type="B_T_UAV_03_F";
