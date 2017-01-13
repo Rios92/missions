@@ -1,4 +1,4 @@
-﻿onLoadName = "TFT Insurgency v1.1m";
+﻿onLoadName = "TFT Insurgency v1.2m";
 respawnTemplates[] = {"MenuPosition","MenuInventory","Spectator","EndMission"};
 respawnOnStart = 0;
 disabledAI = 1;
@@ -12,23 +12,11 @@ class CfgFunctions {
     #include "functions\cfgfunctions.hpp"
 };
 
- class CfgRoles {
-    class W75 {
-        displayName = "Rangers";
-        icon = "\a3\ui_f\data\map\markers\nato\n_inf.paa";
-    };
-    class W160 {
-        displayName = "SOAR";
-        icon = "\a3\ui_f\data\map\markers\nato\n_air.paa";
-    };
-};
-
 class CfgRespawnInventory {
 
     class RM {
         displayName = "Rifleman";
         icon = "iconMan";
-        role = "W75";
         uniformClass = "TFT_Uniform_OCP";
         weapons[] = {
             "hlc_rifle_M4",
@@ -37,43 +25,20 @@ class CfgRespawnInventory {
             "Put"
         };
         magazines[] = {
-            "SmokeShellGreen",
-            "SmokeShellGreen",
-            "B_IR_Grenade",
-            "Chemlight_green",
-            "Chemlight_green",
-            "30Rnd_556x45_Stanag_Tracer_Red",
-            "30Rnd_556x45_Stanag_Tracer_Red",
-            "30Rnd_556x45_Stanag_Tracer_Red",
-            "30Rnd_556x45_Stanag_Tracer_Red",
-            "30Rnd_556x45_Stanag_Tracer_Red",
+            "SmokeShellGreen", "SmokeShellGreen", "B_IR_Grenade", "Chemlight_green", "Chemlight_green",
+            "30Rnd_556x45_Stanag_Tracer_Red", "30Rnd_556x45_Stanag_Tracer_Red", "30Rnd_556x45_Stanag_Tracer_Red", "30Rnd_556x45_Stanag_Tracer_Red", "30Rnd_556x45_Stanag_Tracer_Red",
             "ACE_M84",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
+            "SmokeShell", "SmokeShell", "SmokeShell", "SmokeShell",
             "HandGrenade"
         };
         items[] = {
             "ACE_EarPlugs",
             "acc_flashlight",
-            "ACE_CableTie",
-            "ACE_CableTie",
             "ACE_MapTools",
-            "ACE_morphine",
-            "ACE_morphine",
-            "ACE_morphine",
+            "ACE_morphine", "ACE_morphine", "ACE_morphine",
             "ACE_epinephrine",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
             "ACE_bloodIV",
             "ACE_IR_Strobe_Item"
         };
@@ -95,7 +60,6 @@ class CfgRespawnInventory {
     class STL {
         displayName = "Squad/Team Leader";
         icon = "a3\ui_f\data\map\iconmanleader_ca.paa";
-        role = "W75";
         uniformClass = "TFT_Uniform_OCP";
         backpack = "tf_rt1523g_bwmod";
         weapons[] = {
@@ -107,69 +71,33 @@ class CfgRespawnInventory {
             "Put"
         };
         magazines[] = {
-            "SmokeShellGreen",
-            "SmokeShellGreen",
+            "SmokeShellGreen", "SmokeShellGreen",
             "B_IR_Grenade",
-            "Chemlight_green",
-            "Chemlight_green",
-            "HandGrenade",
-            "HandGrenade",
+            "Chemlight_green", "Chemlight_green",
+            "HandGrenade", "HandGrenade",
             "Laserbatteries",
             "ACE_M84",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "UGL_FlareWhite_F",
-            "UGL_FlareWhite_F",
-            "UGL_FlareGreen_F",
-            "UGL_FlareGreen_F",
-            "UGL_FlareCIR_F",
-            "UGL_FlareCIR_F",
-            "1Rnd_Smoke_Grenade_shell",
-            "1Rnd_Smoke_Grenade_shell",
-            "1Rnd_Smoke_Grenade_shell",
-            "1Rnd_SmokeRed_Grenade_shell",
-            "1Rnd_SmokeRed_Grenade_shell",
-            "1Rnd_SmokeRed_Grenade_shell",
-            "1Rnd_SmokeGreen_Grenade_shell",
-            "1Rnd_SmokeGreen_Grenade_shell",
-            "1Rnd_SmokeGreen_Grenade_shell",
-            "30Rnd_556x45_Stanag_red",
-            "30Rnd_556x45_Stanag_red",
-            "30Rnd_556x45_Stanag_red",
-            "30Rnd_556x45_Stanag_red",
-            "30Rnd_556x45_Stanag_red",
-            "30Rnd_556x45_Stanag_red"
+            "SmokeShell", "SmokeShell",
+            "SmokeShell", "SmokeShell",
+            "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell",
+            "UGL_FlareWhite_F", "UGL_FlareWhite_F",
+            "UGL_FlareGreen_F", "UGL_FlareGreen_F",
+            "UGL_FlareCIR_F", "UGL_FlareCIR_F",
+            "1Rnd_Smoke_Grenade_shell", "1Rnd_Smoke_Grenade_shell", "1Rnd_Smoke_Grenade_shell",
+            "1Rnd_SmokeRed_Grenade_shell", "1Rnd_SmokeRed_Grenade_shell", "1Rnd_SmokeRed_Grenade_shell",
+            "1Rnd_SmokeGreen_Grenade_shell", "1Rnd_SmokeGreen_Grenade_shell", "1Rnd_SmokeGreen_Grenade_shell",
+            "30Rnd_556x45_Stanag_red", "30Rnd_556x45_Stanag_red", "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_red", "30Rnd_556x45_Stanag_red", "30Rnd_556x45_Stanag_red"
         };
         items[] = {
             "ACE_EarPlugs",
             "acc_flashlight",
-            "ACE_CableTie",
-            "ACE_CableTie",
             "ACE_MapTools",
-            "ACE_morphine",
-            "ACE_morphine",
-            "ACE_morphine",
+            "ACE_morphine", "ACE_morphine", "ACE_morphine",
             "ACE_epinephrine",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", 
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
             "ACE_bloodIV"
         };
         linkedItems[] = {
@@ -191,7 +119,6 @@ class CfgRespawnInventory {
     class GRN {
         displayName = "Grenadier";
         icon = "iconMan";
-        role = "W75";
         uniformClass = "TFT_Uniform_OCP";
         backpack = "TFT_Assault_OCP";
         weapons[] = {
@@ -202,69 +129,31 @@ class CfgRespawnInventory {
             "Put"
         };
         magazines[] = {
-            "SmokeShellGreen",
-            "SmokeShellGreen",
+            "SmokeShellGreen", "SmokeShellGreen",
             "B_IR_Grenade",
-            "Chemlight_green",
-            "Chemlight_green",
-            "HandGrenade",
-            "HandGrenade",
+            "Chemlight_green", "Chemlight_green",
+            "HandGrenade", "HandGrenade",
             "ACE_M84",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "1Rnd_HE_Grenade_shell",
-            "UGL_FlareWhite_F",
-            "UGL_FlareWhite_F",
-            "UGL_FlareWhite_F",
-            "UGL_FlareGreen_F",
-            "UGL_FlareGreen_F",
-            "UGL_FlareCIR_F",
-            "UGL_FlareCIR_F",
-            "1Rnd_Smoke_Grenade_shell",
-            "1Rnd_Smoke_Grenade_shell",
-            "1Rnd_Smoke_Grenade_shell",
-            "1Rnd_SmokeRed_Grenade_shell",
-            "1Rnd_SmokeRed_Grenade_shell",
-            "1Rnd_SmokeRed_Grenade_shell",
-            "1Rnd_SmokeGreen_Grenade_shell",
-            "1Rnd_SmokeGreen_Grenade_shell",
-            "1Rnd_SmokeGreen_Grenade_shell",
-            "30Rnd_556x45_Stanag_red",
-            "30Rnd_556x45_Stanag_red",
-            "30Rnd_556x45_Stanag_red",
-            "30Rnd_556x45_Stanag_red",
-            "30Rnd_556x45_Stanag_red"
+            "SmokeShell", "SmokeShell", "SmokeShell", "SmokeShell",
+            "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell",
+            "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell",
+            "UGL_FlareWhite_F", "UGL_FlareWhite_F", "UGL_FlareWhite_F",
+            "UGL_FlareGreen_F", "UGL_FlareGreen_F",
+            "UGL_FlareCIR_F", "UGL_FlareCIR_F",
+            "1Rnd_Smoke_Grenade_shell", "1Rnd_Smoke_Grenade_shell", "1Rnd_Smoke_Grenade_shell",
+            "1Rnd_SmokeRed_Grenade_shell", "1Rnd_SmokeRed_Grenade_shell", "1Rnd_SmokeRed_Grenade_shell",
+            "1Rnd_SmokeGreen_Grenade_shell", "1Rnd_SmokeGreen_Grenade_shell", "1Rnd_SmokeGreen_Grenade_shell",
+            "30Rnd_556x45_Stanag_red", "30Rnd_556x45_Stanag_red", "30Rnd_556x45_Stanag_red", "30Rnd_556x45_Stanag_red", "30Rnd_556x45_Stanag_red"
         };
         items[] = {
             "ACE_EarPlugs",
             "acc_flashlight",
-            "ACE_CableTie",
-            "ACE_CableTie",
             "ACE_MapTools",
-            "ACE_morphine",
-            "ACE_morphine",
-            "ACE_morphine",
+            "ACE_morphine", "ACE_morphine", "ACE_morphine",
             "ACE_epinephrine",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
             "ACE_bloodIV"
         };
         linkedItems[] = {
@@ -285,7 +174,6 @@ class CfgRespawnInventory {
     class AR {
         displayName = "AutoRifleman";
         icon = "a3\ui_f\data\map\vehicleiconsiconManMG";
-        role = "W75";
         uniformClass = "TFT_Uniform_OCP";
         backpack = "TFT_Assault_OCP";
         weapons[] = {
@@ -296,51 +184,28 @@ class CfgRespawnInventory {
             "Put"
         };
         magazines[] = {
-            "HandGrenade",
-            "HandGrenade",
-            "SmokeShellGreen",
-            "SmokeShellGreen",
+            "HandGrenade", "HandGrenade",
+            "SmokeShellGreen", "SmokeShellGreen",
             "B_IR_Grenade",
-            "Chemlight_green",
-            "Chemlight_green",
+            "Chemlight_green", "Chemlight_green",
             "16Rnd_9x21_red_Mag",
             "ACE_M84",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
-            "HandGrenade",
-            "HandGrenade",
-            "SmokeShellGreen",
-            "SmokeShellGreen",
+            "SmokeShell", "SmokeShell", "SmokeShell", "SmokeShell",
+            "HandGrenade", "HandGrenade",
+            "SmokeShellGreen", "SmokeShellGreen",
             "ACE_Chemlight_HiOrange",
-            "Chemlight_green",
-            "Chemlight_green",
-            "B_IR_Grenade",
-            "B_IR_Grenade",
-            "200Rnd_556x45_Box_Tracer_Red_F",
-            "200Rnd_556x45_Box_Tracer_Red_F",
+            "Chemlight_green", "Chemlight_green",
+            "B_IR_Grenade", "B_IR_Grenade",
+            "200Rnd_556x45_Box_Tracer_Red_F", "200Rnd_556x45_Box_Tracer_Red_F",
             "B_IR_Grenade"
         };
         items[] = {
             "ACE_EarPlugs",
             "acc_flashlight",
-            "ACE_CableTie",
-            "ACE_CableTie",
-            "ACE_morphine",
-            "ACE_morphine",
-            "ACE_morphine",
+            "ACE_morphine", "ACE_morphine", "ACE_morphine",
             "ACE_epinephrine",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
             "ACE_bloodIV",
             "ACE_IR_Strobe_Item",
             "ACE_MapTools"
@@ -363,7 +228,6 @@ class CfgRespawnInventory {
     class MAT {
         displayName = "MAAWS Anti-Tank";
         icon = "a3\ui_f\data\map\vehicleicons\iconManAT";
-        role = "W75";
         uniformClass = "TFT_Uniform_OCP";
         backpack = "TFT_Kitbag_OCP";
         weapons[] = {
@@ -375,44 +239,23 @@ class CfgRespawnInventory {
             "Put"
         };
         magazines[] = {
-            "SmokeShellGreen",
-            "SmokeShellGreen",
+            "SmokeShellGreen", "SmokeShellGreen",
             "B_IR_Grenade",
-            "Chemlight_green",
-            "Chemlight_green",
-            "HandGrenade",
-            "HandGrenade",
+            "Chemlight_green", "Chemlight_green",
+            "HandGrenade", "HandGrenade",
             "ACE_M84",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
-            "16Rnd_9x21_red_Mag",
-            "16Rnd_9x21_red_Mag",
-            "tf47_m3maaws_HEAT",
-            "tf47_m3maaws_HEAT",
-            "tf47_m3maaws_HEAT"
+            "SmokeShell", "SmokeShell", "SmokeShell", "SmokeShell",
+            "16Rnd_9x21_red_Mag", "16Rnd_9x21_red_Mag",
+            "tf47_m3maaws_HEAT", "tf47_m3maaws_HEAT", "tf47_m3maaws_HEAT"
         };
         items[] = {
             "ACE_EarPlugs",
             "acc_flashlight",
-            "ACE_CableTie",
-            "ACE_CableTie",
             "ACE_MapTools",
-            "ACE_morphine",
-            "ACE_morphine",
-            "ACE_morphine",
+            "ACE_morphine", "ACE_morphine", "ACE_morphine",
             "ACE_epinephrine",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
             "ACE_bloodIV"
         };
         linkedItems[] = {
@@ -433,7 +276,6 @@ class CfgRespawnInventory {
         class TAT {
         displayName = "Titan Anti-Tank";
         icon = "a3\ui_f\data\map\vehicleicons\iconManAT";
-        role = "W75";
         uniformClass = "TFT_Uniform_OCP";
         backpack = "TFT_Kitbag_OCP";
         weapons[] = {
@@ -445,44 +287,23 @@ class CfgRespawnInventory {
             "Put"
         };
         magazines[] = {
-            "SmokeShellGreen",
-            "SmokeShellGreen",
+            "SmokeShellGreen", "SmokeShellGreen",
             "B_IR_Grenade",
-            "Chemlight_green",
-            "Chemlight_green",
-            "HandGrenade",
-            "HandGrenade",
+            "Chemlight_green", "Chemlight_green",
+            "HandGrenade", "HandGrenade",
             "ACE_M84",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
-            "SmokeShell",
-            "16Rnd_9x21_red_Mag",
-            "16Rnd_9x21_red_Mag",
-            "Titan_AT",
-            "Titan_AT",
-            "Titan_AT"
+            "SmokeShell", "SmokeShell", "SmokeShell", "SmokeShell",
+            "16Rnd_9x21_red_Mag", "16Rnd_9x21_red_Mag",
+            "Titan_AT", "Titan_AT", "Titan_AT"
         };
         items[] = {
             "ACE_EarPlugs",
             "acc_flashlight",
-            "ACE_CableTie",
-            "ACE_CableTie",
             "ACE_MapTools",
-            "ACE_morphine",
-            "ACE_morphine",
-            "ACE_morphine",
+            "ACE_morphine", "ACE_morphine", "ACE_morphine",
             "ACE_epinephrine",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
-            "ACE_fieldDressing",
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
+            "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
             "ACE_bloodIV"
         };
         linkedItems[] = {
@@ -503,7 +324,6 @@ class CfgRespawnInventory {
     class CLS {
         displayName = "Combat Lifesaver";
         icon = "a3\ui_f\data\map\iconmanmedic_ca.paa";
-        role = "W75";
         uniformClass = "TFT_Uniform_OCP";
         backpack = "TFT_Assault_OCP";
         weapons[] = {
@@ -541,8 +361,7 @@ class CfgRespawnInventory {
         items[] = {
             "ACE_EarPlugs",
             "acc_flashlight",
-            "ACE_CableTie",
-            "ACE_CableTie",
+    
             "ACE_MapTools",
             "ACE_morphine",
             "ACE_morphine",
@@ -617,7 +436,6 @@ class CfgRespawnInventory {
     class DMR {
         displayName = "Designated Marksman";
         icon = "a3\ui_f\data\map\iconmanrecon_ca.paa";
-        role = "W75";
         uniformClass = "TFT_Uniform_OCP";
         weapons[] = {
             "hlc_rifle_M4",
@@ -651,8 +469,7 @@ class CfgRespawnInventory {
         items[] = {
             "ACE_EarPlugs",
             "acc_flashlight",
-            "ACE_CableTie",
-            "ACE_CableTie",
+    
             "ACE_MapTools",
             "ACE_morphine",
             "ACE_morphine",
@@ -688,7 +505,6 @@ class CfgRespawnInventory {
     class SP {
         displayName = "SOAR Pilot";
         icon = "iconMan";
-        role = "W160";
         uniformClass = "TFT_Uniform_OCP";
         backpack = "tf_rt1523g_bwmod";
         weapons[] = {
@@ -761,7 +577,6 @@ class CfgRespawnInventory {
     class SC {
         displayName = "SOAR Crew";
         icon = "iconMan";
-        role = "W160";
         uniformClass = "TFT_Uniform_OCP";
         backpack = "tf_rt1523g_bwmod";
         weapons[] = {
