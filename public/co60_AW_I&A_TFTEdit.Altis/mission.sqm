@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=708;
+		nextID=718;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14644.119,125.6498,16753.213};
-		dir[]={-0.42210075,-0.78025305,0.46161684};
-		up[]={-0.52655643,0.62540984,0.57585132};
-		aside[]={0.73801214,-1.4109537e-007,0.67483211};
+		pos[]={21267.611,48.293877,7111.6426};
+		dir[]={-0.8058266,-0.57684386,0.13378987};
+		up[]={-0.56905586,0.81685191,0.09447924};
+		aside[]={0.16378592,4.3801265e-008,0.986498};
 	};
 };
 binarizationWanted=0;
@@ -335,7 +335,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=562;
+		items=571;
 		class Item0
 		{
 			dataType="Marker";
@@ -1103,15 +1103,15 @@ class Mission
 		class Item84
 		{
 			dataType="Marker";
-			position[]={23376.975,12.849569,19802.217};
+			position[]={23376.975,-6.1546522e-018,19802.217};
 			name="vehService_1";
-			text="Vehicle Service";
+			text="Vehicle Depot";
 			type="b_maint";
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
-			angle=0.2292757;
 			id=84;
+			atlOffset=-12.849569;
 		};
 		class Item85
 		{
@@ -1128,14 +1128,15 @@ class Mission
 		class Item86
 		{
 			dataType="Marker";
-			position[]={19958.486,60.28656,11448.795};
+			position[]={19958.486,-0.086794466,11448.795};
 			name="vehService_3";
-			text="Vehicle Service";
+			text="Vehicle Depot";
 			type="b_maint";
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
 			id=86;
+			atlOffset=-60.373356;
 		};
 		class Item87
 		{
@@ -1546,15 +1547,15 @@ class Mission
 		class Item127
 		{
 			dataType="Marker";
-			position[]={5767.9648,221.97894,20091.301};
+			position[]={5767.9648,-1.5232672e-021,20091.301};
 			name="vehService_4";
-			text="Vehicle Service";
+			text="Vehicle Depot";
 			type="b_maint";
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
-			angle=302.88394;
 			id=127;
+			atlOffset=-221.97894;
 		};
 		class Item128
 		{
@@ -1575,15 +1576,15 @@ class Mission
 		class Item130
 		{
 			dataType="Marker";
-			position[]={5021.3726,16.924837,14433.188};
+			position[]={5021.373,-2.4493359e-021,14433.188};
 			name="vehService_5";
-			text="Vehicle Service";
+			text="Vehicle Depot";
 			type="b_maint";
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
-			angle=274.3526;
 			id=130;
+			atlOffset=-16.924835;
 		};
 		class Item131
 		{
@@ -1603,7 +1604,6 @@ class Mission
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
-			angle=351.01904;
 			id=132;
 		};
 		class Item133
@@ -1616,7 +1616,6 @@ class Mission
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
-			angle=325.21472;
 			id=133;
 			atlOffset=9.5367432e-007;
 		};
@@ -1647,21 +1646,20 @@ class Mission
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
-			angle=67.828163;
 			id=136;
 		};
 		class Item137
 		{
 			dataType="Marker";
-			position[]={21243.592,21.902754,7137.605};
+			position[]={21243.592,-7.1346947e-024,7137.605};
 			name="vehService_9";
-			text="Vehicle Service";
+			text="Vehicle Depot";
 			type="b_maint";
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
-			angle=30.526184;
 			id=137;
+			atlOffset=-21.902754;
 		};
 		class Item138
 		{
@@ -1691,28 +1689,28 @@ class Mission
 		class Item141
 		{
 			dataType="Marker";
-			position[]={7256.834,6.3651772,11111.93};
+			position[]={7256.834,2.353704e+025,11111.93};
 			name="vehService_10";
-			text="Vehicle Service";
+			text="Vehicle Depot";
 			type="b_maint";
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
-			angle=239.45593;
 			id=141;
+			atlOffset=2.353704e+025;
 		};
 		class Item142
 		{
 			dataType="Marker";
-			position[]={26727.711,22.330521,24554.17};
+			position[]={26727.711,1.3767413e+028,24554.17};
 			name="vehService_1_1";
-			text="Vehicle Service";
+			text="Vehicle Depot";
 			type="b_maint";
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
-			angle=261.13089;
 			id=142;
+			atlOffset=1.3767413e+028;
 		};
 		class Item143
 		{
@@ -2826,14 +2824,14 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14591.785,20.782696,16880.313};
-				angles[]={0,5.5148525,0};
+				angles[]={0,5.5148563,0};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="_nil = [this, 480, 480] execVM ""veh_respawn.sqf""";
+				init="_nil = [this, 30, 480] execVM ""veh_respawn.sqf""";
 			};
 			id=188;
 			type="B_APC_Wheeled_01_cannon_F";
@@ -3223,14 +3221,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14486.255,20.486105,16808.445};
-				angles[]={0.0013372133,5.497787,0.0053265258};
+				position[]={14486.255,20.486107,16808.443};
+				angles[]={0.0013439035,5.497787,0.0053232545};
 			};
 			side="Empty";
 			class Attributes
 			{
+				health=0.311501;
 				skill=0.60000002;
-				init="_nil = [this, 480, 480] execVM ""veh_respawn.sqf""";
+				init="_nil = [this, 30, 480] execVM ""veh_respawn.sqf""";
 			};
 			id=209;
 			type="B_MBT_01_TUSK_F";
@@ -16364,6 +16363,177 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item562
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5745.0313,224.52654,20070.4};
+				angles[]={0,5.0839858,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.311501;
+				skill=0.60000002;
+				init="_nil = [this, 30, 480] execVM ""veh_respawn.sqf""";
+			};
+			id=708;
+			type="B_MBT_01_TUSK_F";
+			atlOffset=0.50125122;
+		};
+		class Item563
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7254.6768,8.8068237,11099.464};
+				angles[]={0.0013439035,5.497787,0.0053232545};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.311501;
+				skill=0.60000002;
+				init="_nil = [this, 30, 480] execVM ""veh_respawn.sqf""";
+			};
+			id=709;
+			type="B_MBT_01_TUSK_F";
+			atlOffset=0.52832651;
+		};
+		class Item564
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19975.027,62.748928,11415.837};
+				angles[]={0,0.46292937,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.311501;
+				skill=0.60000002;
+				init="_nil = [this, 30, 480] execVM ""veh_respawn.sqf""";
+			};
+			id=710;
+			type="B_MBT_01_TUSK_F";
+			atlOffset=0.50825119;
+		};
+		class Item565
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={23349.16,16.216003,19788.703};
+				angles[]={0,2.4145968,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.311501;
+				skill=0.60000002;
+				init="_nil = [this, 30, 480] execVM ""veh_respawn.sqf""";
+			};
+			id=711;
+			type="B_MBT_01_TUSK_F";
+			atlOffset=0.49667931;
+		};
+		class Item566
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4999.8784,20.816967,14412.405};
+				angles[]={0,5.5148563,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				lock="UNLOCKED";
+				init="_nil = [this, 30, 480] execVM ""veh_respawn.sqf""";
+			};
+			id=713;
+			type="B_APC_Wheeled_01_cannon_F";
+			atlOffset=0.49966812;
+		};
+		class Item567
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11563.773,26.150978,11892.889};
+				angles[]={0,2.3313582,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				lock="UNLOCKED";
+				init="_nil = [this, 30, 480] execVM ""veh_respawn.sqf""";
+			};
+			id=714;
+			type="B_APC_Wheeled_01_cannon_F";
+			atlOffset=0.49733543;
+		};
+		class Item568
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9165.084,17.434479,21644.619};
+				angles[]={0,2.5756135,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				lock="UNLOCKED";
+				init="_nil = [this, 30, 480] execVM ""veh_respawn.sqf""";
+			};
+			id=715;
+			type="B_APC_Wheeled_01_cannon_F";
+			atlOffset=0.4935379;
+		};
+		class Item569
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={26732.742,24.257936,24579.768};
+				angles[]={0,3.9030786,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				lock="UNLOCKED";
+				init="_nil = [this, 30, 480] execVM ""veh_respawn.sqf""";
+			};
+			id=716;
+			type="B_APC_Wheeled_01_cannon_F";
+			atlOffset=0.49536514;
+		};
+		class Item570
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={21215.521,26.937614,7092.5688};
+				angles[]={0,5.269537,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				lock="UNLOCKED";
+				init="_nil = [this, 30, 480] execVM ""veh_respawn.sqf""";
+			};
+			id=717;
+			type="B_APC_Wheeled_01_cannon_F";
+			atlOffset=0.47926903;
 		};
 	};
 	class Connections
