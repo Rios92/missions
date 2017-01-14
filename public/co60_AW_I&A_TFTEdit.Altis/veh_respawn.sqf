@@ -1,7 +1,7 @@
 /*  
 =========================================================
   Simple Vehicle Respawn Script v1.7
-  by Tophe of Östgöta Ops [OOPS]
+  by Tophe of Ã–stgÃ¶ta Ops [OOPS]
   
   Put this in the vehicles init line:
   veh = [this] execVM "veh_respawn.sqf"
@@ -142,6 +142,31 @@ while {_run} do
         _unit setPosASL _position;
         _unit setDir _dir;
 
+		if (typeOf _unit in ["B_Heli_Transport_01_camo_F", "B_Heli_Transport_01_F", "B_Heli_Transport_03_F"]) then {
+			_unit addAction [
+				"Toggle Guns",
+				{
+					_heli = (_this select 0);
+					_mag = count (_heli magazinesTurret [1]);
+					if (_mag == 0) then {
+						_heli addMagazineTurret ["2000Rnd_65x39_Belt_Tracer_Red", [1]];
+						_heli addMagazineTurret ["2000Rnd_65x39_Belt_Tracer_Red", [2]];
+						_heli vehicleChat "Guns enabled.";
+					} else {
+						_heli removeMagazinesTurret ["2000Rnd_65x39_Belt_Tracer_Red", [1]];
+						_heli removeMagazinesTurret ["2000Rnd_65x39_Belt_Tracer_Red", [2]];
+						_heli vehicleChat "Guns disabled.";
+					};
+				},
+				[],
+				1.5,
+				false,
+				false,
+				"",
+				"driver _target == _this"
+			];
+		};
+		
         if (_haveinit) then {[[netID _unit, _unitinit], "fnc_setVehicleInit", true, true] spawn BIS_fnc_MP;};
 
         if (_hasname) then {[[netID _unit, _unitname], "fnc_setVehicleVarName", true, true] spawn BIS_fnc_MP;};
