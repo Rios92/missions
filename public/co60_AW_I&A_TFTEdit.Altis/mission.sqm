@@ -2880,7 +2880,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14707.175,21.271587,16687.654};
-				angles[]={0,0.79491007,0};
+				angles[]={0,0.79491019,0};
 			};
 			side="Empty";
 			flags=4;
@@ -2889,7 +2889,7 @@ class Mission
 				skill=0.60000002;
 				ammo=0.66858453;
 				lock="UNLOCKED";
-				init="_nil = [this, 180, 180] execVM ""veh_respawn.sqf""";
+				init="_nil = [this, 180, 180] execVM ""veh_respawn.sqf"";   " \n "this addAction [ " \n " ""Toggle Guns"", " \n " { " \n "  _heli = (_this select 0); " \n "  _mag = count (_heli magazinesTurret [1]); " \n "  if (_mag == 0) then { " \n "   _heli addMagazineTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [1]]; " \n "   _heli addMagazineTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [2]]; " \n "   _heli vehicleChat ""Guns enabled.""; " \n "  } else { " \n "   _heli removeMagazinesTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [1]]; " \n "   _heli removeMagazinesTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [2]]; " \n "   _heli vehicleChat ""Guns disabled.""; " \n "  }; " \n " }, " \n " [], " \n " 1.5, " \n " false, " \n " false, " \n " """", " \n " ""driver _target == _this"" " \n "];";
 				name="MH_2";
 			};
 			id=191;
@@ -2921,7 +2921,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14681.006,20.049248,16660.291};
+				position[]={14681.006,20.049248,16660.289};
 				angles[]={0,5.5072994,0};
 			};
 			side="Empty";
@@ -2930,7 +2930,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="_nil = [this, 180, 180] execVM ""veh_respawn.sqf""";
+				init="_nil = [this, 180, 180] execVM ""veh_respawn.sqf"";   " \n "this addAction [ " \n " ""Toggle Guns"", " \n " { " \n "  _heli = (_this select 0); " \n "  _mag = count (_heli magazinesTurret [1]); " \n "  if (_mag == 0) then { " \n "   _heli addMagazineTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [1]]; " \n "   _heli addMagazineTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [2]]; " \n "   _heli vehicleChat ""Guns enabled.""; " \n "  } else { " \n "   _heli removeMagazinesTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [1]]; " \n "   _heli removeMagazinesTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [2]]; " \n "   _heli vehicleChat ""Guns disabled.""; " \n "  }; " \n " }, " \n " [], " \n " 1.5, " \n " false, " \n " false, " \n " """", " \n " ""driver _target == _this"" " \n "];";
 				name="GH_1";
 			};
 			id=193;
@@ -7473,7 +7473,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="_nil = [this, 240, 240] execVM ""veh_respawn.sqf""";
+				init="_nil = [this, 240, 240] execVM ""veh_respawn.sqf"";   " \n "this addAction [ " \n " ""Toggle Guns"", " \n " { " \n "  _heli = (_this select 0); " \n "  _mag = count (_heli magazinesTurret [1]); " \n "  if (_mag == 0) then { " \n "   _heli addMagazineTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [1]]; " \n "   _heli addMagazineTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [2]]; " \n "   _heli vehicleChat ""Guns enabled.""; " \n "  } else { " \n "   _heli removeMagazinesTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [1]]; " \n "   _heli removeMagazinesTurret [""2000Rnd_65x39_Belt_Tracer_Red"", [2]]; " \n "   _heli vehicleChat ""Guns disabled.""; " \n "  }; " \n " }, " \n " [], " \n " 1.5, " \n " false, " \n " false, " \n " """", " \n " ""driver _target == _this"" " \n "];";
 				name="GH_2";
 			};
 			id=350;
@@ -16400,7 +16400,7 @@ class Mission
 			};
 			id=709;
 			type="B_MBT_01_TUSK_F";
-			atlOffset=0.52832651;
+			atlOffset=0.52832603;
 		};
 		class Item564
 		{
@@ -16438,7 +16438,7 @@ class Mission
 			};
 			id=711;
 			type="B_MBT_01_TUSK_F";
-			atlOffset=0.49667931;
+			atlOffset=0.49667835;
 		};
 		class Item566
 		{
@@ -16495,7 +16495,7 @@ class Mission
 			};
 			id=715;
 			type="B_APC_Wheeled_01_cannon_F";
-			atlOffset=0.4935379;
+			atlOffset=0.49353886;
 		};
 		class Item569
 		{
@@ -16514,7 +16514,7 @@ class Mission
 			};
 			id=716;
 			type="B_APC_Wheeled_01_cannon_F";
-			atlOffset=0.49536514;
+			atlOffset=0.49328423;
 		};
 		class Item570
 		{
