@@ -1,5 +1,5 @@
-﻿onLoadName = "TFT Insurgency v1.2m";
-respawnTemplates[] = {"MenuPosition","MenuInventory","Spectator","EndMission"};
+﻿onLoadName = "TFT Insurgency v1.3m";
+respawnTemplates[] = {"MenuPosition","Spectator","EndMission"};
 respawnOnStart = 0;
 disabledAI = 1;
 
