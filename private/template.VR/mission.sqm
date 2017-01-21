@@ -395,7 +395,7 @@ class Mission
 			position[]={371.94391,5,481.93787};
 			name="respawn_west";
 			type="Empty";
-			angle=109.02972;
+			angle=109.02971;
 			id=0;
 		};
 		class Item1
@@ -483,6 +483,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="this call TFT_fnc_addActions";
+				disableSimulation=1;
 			};
 			id=6;
 			type="Land_PaperBox_open_full_F";
@@ -509,25 +510,6 @@ class Mission
 				};
 				class Attribute1
 				{
-					property="enableSimulation";
-					expression="if !(is3DEN) then {_this enablesimulationglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute2
-				{
 					property="ace_isMedicalFacility";
 					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
 					class Value
@@ -545,7 +527,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=3;
+				nAttributes=2;
 			};
 		};
 		class Item4
@@ -896,7 +878,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=11;
+				items=10;
 				class Item0
 				{
 					dataType="Object";
@@ -966,70 +948,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={377.08698,5.0014391,481.48572};
-						angles[]={0,4.7710609,0};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						init="this setGroupId [tft_callsign_spartan_1_1];";
-						name="RTO_16";
-						description="Spartan 1-1R RTO";
-						isPlayable=1;
-					};
-					id=14;
-					type="B_recon_JTAC_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={379.48346,5.004096,478.88904};
 						angles[]={0,4.7710609,0};
 					};
@@ -1090,7 +1008,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item3
+				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1153,7 +1071,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1216,7 +1134,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1300,7 +1218,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1382,7 +1300,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1464,7 +1382,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1546,7 +1464,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item9
+				class Item8
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1628,7 +1546,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item10
+				class Item9
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1723,7 +1641,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=11;
+				items=10;
 				class Item0
 				{
 					dataType="Object";
@@ -1794,71 +1712,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={377.19293,5.0034399,491.00378};
-						angles[]={0,4.7710609,0};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						init="this setGroupId [tft_callsign_spartan_1_2];";
-						name="RTO_17";
-						description="Spartan 1-2R RTO";
-						isPlayable=1;
-					};
-					id=26;
-					type="B_recon_JTAC_F";
-					atlOffset=0.0020008087;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={379.77203,5.0027571,487.43347};
 						angles[]={0,4.7710609,0};
 					};
@@ -1919,7 +1772,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item3
+				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1983,7 +1836,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2047,7 +1900,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2131,7 +1984,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2213,7 +2066,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2295,7 +2148,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2377,7 +2230,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item9
+				class Item8
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2459,7 +2312,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item10
+				class Item9
 				{
 					dataType="Object";
 					class PositionInfo
