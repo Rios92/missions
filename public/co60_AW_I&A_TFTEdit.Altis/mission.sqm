@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14400.651,42.261723,16717.498};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={14771.859,138.99532,16636.053};
+		dir[]={-0.56988168,-0.60558683,0.55543357};
+		up[]={-0.43367809,0.7957769,0.42268279};
+		aside[]={0.69797117,1.0617077e-007,0.7161293};
 	};
 };
 binarizationWanted=0;
@@ -2836,6 +2836,7 @@ class Mission
 			};
 			id=188;
 			type="B_APC_Wheeled_01_cannon_F";
+			atlOffset=-7.6293945e-006;
 		};
 		class Item187
 		{
@@ -2873,6 +2874,7 @@ class Mission
 			};
 			id=190;
 			type="B_APC_Tracked_01_CRV_F";
+			atlOffset=-7.6293945e-005;
 		};
 		class Item189
 		{
@@ -7950,7 +7952,7 @@ class Mission
 			};
 			id=366;
 			type="B_APC_Tracked_01_rcws_F";
-			atlOffset=0.49994087;
+			atlOffset=0.49993515;
 		};
 		class Item354
 		{
@@ -12554,12 +12556,13 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14609.253,18.011438,16786.213};
-						angles[]={0,5.4346304,0};
+						angles[]={0,5.4346237,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						description="Recon Demo Specialist";
 						isPlayable=1;
 					};
 					id=707;
@@ -13077,7 +13080,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14730.07,17.911438,16817.18};
-						angles[]={0,5.5069294,0};
+						angles[]={0,5.5069323,0};
 					};
 					side="West";
 					flags=6;
@@ -13087,11 +13090,34 @@ class Mission
 						rank="CORPORAL";
 						init="(group this) setGroupId [""UAV - Deathstar""];";
 						name="uavOperator";
-						description="UAV Operator - Deathstar";
+						description="UAV Operator - Deathstar 1";
 						isPlayable=1;
 					};
 					id=575;
 					type="B_soldier_UAV_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
@@ -13099,7 +13125,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14730.783,17.911438,16817.879};
-						angles[]={0,5.5069294,0};
+						angles[]={0,5.5069323,0};
 					};
 					side="West";
 					flags=5;
@@ -13107,6 +13133,7 @@ class Mission
 					{
 						init="(group this) setGroupId [""UAV - Deathstar""];";
 						name="uavOperator1";
+						description="UAV Operator - Deathstar 2";
 						isPlayable=1;
 					};
 					id=688;
