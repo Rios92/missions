@@ -309,7 +309,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Co-40 AW Invade & Annex TFT";
-		overviewText="Version 2.75 TFTv3";
+		overviewText="Version 2.75 TFTv4";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;
