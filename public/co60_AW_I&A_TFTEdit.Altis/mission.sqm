@@ -3890,7 +3890,6 @@ class Mission
 				skill=0.60000002;
 				init="this addAction [""<t color='#ffff00'>Set C4 Charge</t>"",""mission\side\actions\sabotage.sqf"",[],21,true,true,"""",'((vehicle player) == player)']; this allowDamage false;";
 				name="crate1";
-				createAsSimpleObject=1;
 			};
 			id=250;
 			type="Land_PaperBox_open_full_F";
@@ -3909,7 +3908,6 @@ class Mission
 				skill=0.60000002;
 				init="this addAction [""<t color='#ffff00'>Set C4 Charge</t>"",""mission\side\actions\sabotage.sqf"",[],21,true,true,"""",'((vehicle player) == player)']; this allowDamage false;";
 				name="crate2";
-				createAsSimpleObject=1;
 			};
 			id=251;
 			type="Land_PaperBox_closed_F";
