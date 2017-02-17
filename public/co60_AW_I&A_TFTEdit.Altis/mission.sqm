@@ -2891,7 +2891,7 @@ class Mission
 				skill=0.60000002;
 				ammo=0.66858453;
 				lock="UNLOCKED";
-				init="_nil = [this, 10, 240] execVM ""veh_respawn.sqf"";   " \n "null = [this] execVM ""addToggleGuns.sqf"";";
+				init="_nil = [this, 10, 240, 0, FALSE, ""null = [_this] execVM """"addToggleGuns.sqf"""";""] execVM ""veh_respawn.sqf"";    " \n "null = [this] execVM ""addToggleGuns.sqf"";";
 				name="MH_2";
 			};
 			id=191;
@@ -2932,7 +2932,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="_nil = [this, 10, 240] execVM ""veh_respawn.sqf"";   " \n "null = [this] execVM ""addToggleGuns.sqf"";";
+				init="_nil = [this, 10, 240, 0, FALSE, ""null = [_this] execVM """"addToggleGuns.sqf"""";""] execVM ""veh_respawn.sqf"";    " \n "null = [this] execVM ""addToggleGuns.sqf"";";
 				name="GH_1";
 			};
 			id=193;
@@ -7473,7 +7473,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="_nil = [this, 10, 240] execVM ""veh_respawn.sqf"";   " \n "null = [this] execVM ""addToggleGuns.sqf"";";
+				init="_nil = [this, 10, 240, 0, FALSE, ""null = [_this] execVM """"addToggleGuns.sqf"""";""] execVM ""veh_respawn.sqf"";    " \n "null = [this] execVM ""addToggleGuns.sqf"";";
 				name="GH_2";
 			};
 			id=350;
