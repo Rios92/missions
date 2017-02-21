@@ -1,5 +1,9 @@
 onLoadName = "MISSION NAME";
+
 respawnTemplates[] = {"MenuPosition"}; //don't touch
 onRespawnMenu = "tft_vi\open.sqf"; //don't touch
 respawnOnStart = -1;
-disabledAI = 1; 
+
+class CfgFunctions {
+    #include "functions\CfgFunctions.hpp" //don't touch
+};
