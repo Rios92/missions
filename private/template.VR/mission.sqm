@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class Camera
 	{
-		pos[]={3767.8286,15.405156,6894.7554};
-		dir[]={0.76861894,-0.60809743,-0.19920182};
-		up[]={0.58874691,0.79378909,-0.15258449};
-		aside[]={-0.2508983,6.6123903e-007,-0.96809697};
+		pos[]={3777.3174,15.405156,6888.4233};
+		dir[]={0.77652812,-0.62906623,0.038967442};
+		up[]={0.62837029,0.7772792,0.031532768};
+		aside[]={0.050124489,6.2737672e-007,-0.99882376};
 	};
 };
 binarizationWanted=0;
@@ -196,7 +196,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="LIEUTENANT";
-								init="this setGroupId [tft_bft_callsign_hq];";
 								name="PL_16";
 								description="Spartan 1-6 Platoon Leader";
 								isPlayer=1;
@@ -207,6 +206,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -225,7 +243,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item1
@@ -241,7 +259,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_hq];";
 								name="PS_17";
 								description="Spartan 1-7 Platoon Sergeant";
 								isPlayable=1;
@@ -251,6 +268,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -269,7 +305,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item2
@@ -285,7 +321,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_hq];";
 								name="RTO_16";
 								description="Spartan 1-6R Platoon RTO";
 								isPlayable=1;
@@ -295,6 +330,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -313,7 +367,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item3
@@ -329,7 +383,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_hq];";
 								name="R_17";
 								description="Spartan 1-7M Platoon Medic";
 								isPlayable=1;
@@ -339,6 +392,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -357,12 +429,13 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 					};
 					class Attributes
 					{
+						init="call{this setGroupID [""Spartan 1-6""];}";
 					};
 					id=0;
 					class CustomAttributes
@@ -386,7 +459,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
 				class Item1
@@ -931,7 +1023,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="R3_11";
 								description="Spartan 1-1 Rifleman";
 								isPlayable=1;
@@ -941,6 +1032,44 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male10ENG";
+										};
+									};
+								};
+								class Attribute2
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -959,12 +1088,13 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=3;
 							};
 						};
 					};
 					class Attributes
 					{
+						init="call{this setGroupID [""Spartan 1-1""];}";
 					};
 					id=5;
 					class CustomAttributes
@@ -988,7 +1118,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
 				class Item2
@@ -1011,7 +1160,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="SL_12";
 								description="Spartan 1-2 Squad Leader";
 								isPlayable=1;
@@ -1021,6 +1169,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1039,7 +1206,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item1
@@ -1055,7 +1222,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="ASL_12";
 								description="Spartan 1-2A Team Leader";
 								isPlayable=1;
@@ -1065,6 +1231,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1083,7 +1268,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item2
@@ -1099,7 +1284,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="TL_12";
 								description="Spartan 1-2B Team Leader";
 								isPlayable=1;
@@ -1109,6 +1293,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1127,7 +1330,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item3
@@ -1142,7 +1345,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="AR_12";
 								description="Spartan 1-2 AR";
 								isPlayable=1;
@@ -1152,6 +1354,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1170,7 +1391,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item4
@@ -1185,7 +1406,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="GRN_12";
 								description="Spartan 1-2 GRN";
 								isPlayable=1;
@@ -1195,6 +1415,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1213,7 +1452,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item5
@@ -1229,7 +1468,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="CORPORAL";
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="CLS_17";
 								description="Spartan 1-2 CLS";
 								isPlayable=1;
@@ -1239,6 +1477,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1257,7 +1514,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item6
@@ -1272,7 +1529,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="R1_12";
 								description="Spartan 1-2 Rifleman";
 								isPlayable=1;
@@ -1282,6 +1538,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1300,7 +1575,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item7
@@ -1316,7 +1591,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="GRN2_12";
 								description="Spartan 1-2 GRN";
 								isPlayable=1;
@@ -1326,6 +1600,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1344,7 +1637,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item8
@@ -1359,7 +1652,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="DM_17";
 								description="Spartan 1-2 DMR";
 								isPlayable=1;
@@ -1369,6 +1661,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1387,7 +1698,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item9
@@ -1402,7 +1713,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="R2_12";
 								description="Spartan 1-2 Rifleman";
 								isPlayable=1;
@@ -1412,6 +1722,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1430,7 +1759,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item10
@@ -1445,7 +1774,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="AR2_12";
 								description="Spartan 1-2 AR";
 								isPlayable=1;
@@ -1455,6 +1783,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1473,7 +1820,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item11
@@ -1489,7 +1836,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="R3_12";
 								description="Spartan 1-2 Rifleman";
 								isPlayable=1;
@@ -1499,6 +1845,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1517,7 +1882,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item12
@@ -1533,7 +1898,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="AT_12";
 								description="Spartan 1-2 AT";
 								isPlayable=1;
@@ -1543,6 +1907,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1561,12 +1944,13 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 					};
 					class Attributes
 					{
+						init="call{this setGroupID [""Spartan 1-2""];}";
 					};
 					id=17;
 					class CustomAttributes
@@ -1590,7 +1974,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
 				class Item3
@@ -1612,7 +2015,6 @@ class Mission
 							flags=7;
 							class Attributes
 							{
-								init="this setGroupId [tft_bft_callsign_SOAC];" \n "this setVariable [""ACE_isEngineer"", true]";
 								name="DC";
 								description="Nighthawk 6 - SOAC Commander";
 								isPlayable=1;
@@ -1622,6 +2024,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1640,7 +2061,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item1
@@ -1655,7 +2076,6 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setGroupId [tft_bft_callsign_SOAC];" \n "this setVariable [""ACE_isEngineer"", true]";
 								name="FL";
 								description="Razor 1-6 - Company Commander";
 								isPlayable=1;
@@ -1665,6 +2085,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1683,7 +2122,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item2
@@ -1698,7 +2137,6 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setGroupId [tft_bft_callsign_SOAC];" \n "this setVariable [""ACE_isEngineer"", true]";
 								name="P1";
 								description="Razor 1-1 Pilot";
 								isPlayable=1;
@@ -1708,6 +2146,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1726,7 +2183,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item3
@@ -1741,7 +2198,6 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setGroupId [tft_bft_callsign_SOAC];" \n "this setVariable [""ACE_isEngineer"", true]";
 								name="P2";
 								description="Razor 1-2 Pilot";
 								isPlayable=1;
@@ -1751,6 +2207,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1769,7 +2244,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item4
@@ -1784,7 +2259,6 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setGroupId [tft_bft_callsign_SOAC];" \n "this setVariable [""ACE_isEngineer"", true]";
 								name="P3";
 								description="Razor 1-3 Pilot";
 								isPlayable=1;
@@ -1794,6 +2268,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1812,7 +2305,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item5
@@ -1827,7 +2320,6 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setGroupId [tft_bft_callsign_SOAC];" \n "this setVariable [""ACE_isEngineer"", true]";
 								name="P4";
 								description="Razor 1-4 Pilot";
 								isPlayable=1;
@@ -1837,6 +2329,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1855,7 +2366,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item6
@@ -1870,7 +2381,6 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setGroupId [tft_bft_callsign_SOAC];" \n "this setVariable [""ACE_isEngineer"", true]";
 								name="C1";
 								description="Razor 2-1 Crew";
 								isPlayable=1;
@@ -1880,6 +2390,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1898,7 +2427,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item7
@@ -1913,7 +2442,6 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setGroupId [tft_bft_callsign_SOAC];" \n "this setVariable [""ACE_isEngineer"", true]";
 								name="C3";
 								description="Razor 2-3 Crew";
 								isPlayable=1;
@@ -1923,6 +2451,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1941,7 +2488,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item8
@@ -1956,7 +2503,6 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setGroupId [tft_bft_callsign_SOAC];" \n "this setVariable [""ACE_isEngineer"", true]";
 								name="C2";
 								description="Razor 2-2 Crew";
 								isPlayable=1;
@@ -1966,6 +2512,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1984,7 +2549,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item9
@@ -1999,7 +2564,6 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setGroupId [tft_bft_callsign_SOAC];" \n "this setVariable [""ACE_isEngineer"", true]";
 								name="C4";
 								description="Razor 2-4 Crew";
 								isPlayable=1;
@@ -2009,6 +2573,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -2027,7 +2610,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 						class Item10
@@ -2042,7 +2625,6 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setGroupId [tft_bft_callsign_SOAC];" \n "this setVariable [""ACE_isEngineer"", true]";
 								name="C5";
 								description="Razor 2-5 Crew";
 								isPlayable=1;
@@ -2052,6 +2634,25 @@ class Mission
 							class CustomAttributes
 							{
 								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -2070,12 +2671,13 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								nAttributes=2;
 							};
 						};
 					};
 					class Attributes
 					{
+						init="call{this setGroupID [""Razor""];}";
 					};
 					id=29;
 					class CustomAttributes
@@ -2099,7 +2701,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
 				class Item4
@@ -2114,7 +2735,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[this, []] call TFT_fnc_addActions";
+						init="this call TFT_fnc_addActions";
 						disableSimulation=1;
 					};
 					id=39;
