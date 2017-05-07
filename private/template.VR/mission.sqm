@@ -2114,7 +2114,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this call TFT_fnc_addActions";
+						init="[this, []] call TFT_fnc_addActions";
 						disableSimulation=1;
 					};
 					id=39;
