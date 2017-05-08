@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3;
+		nextID=4;
 	};
 	class Camera
 	{
-		pos[]={3777.3174,15.405156,6888.4233};
-		dir[]={0.77652812,-0.62906623,0.038967442};
-		up[]={0.62837029,0.7772792,0.031532768};
-		aside[]={0.050124489,6.2737672e-007,-0.99882376};
+		pos[]={3772.5332,24.968842,6865.3604};
+		dir[]={0.35469046,-0.61790788,0.70187056};
+		up[]={0.27873948,0.78617793,0.55157673};
+		aside[]={0.89258146,3.8393773e-007,-0.45106381};
 	};
 };
 binarizationWanted=0;
@@ -70,14 +70,27 @@ class ScenarioData
 {
 	author="S3 @ TFT8";
 	overViewPicture="intro.jpg";
+	loadScreen="intro.jpg";
+	saving=0;
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
-	respawnDelay=2;
+	respawnDelay=8.2138119;
 	class Header
 	{
 		gameType="Coop";
+		minPlayers=1;
+		maxPlayers=41;
 	};
+	wreckManagerMode=1;
+	wreckLimit=10;
+	wreckRemovalMinTime=30.000002;
+	wreckRemovalMaxTime=1800;
+	corpseManagerMode=1;
+	corpseLimit=40;
+	corpseRemovalMinTime=30.000002;
+	corpseRemovalMaxTime=1800;
+	minPlayerDistance=300;
 };
 class CustomAttributes
 {
@@ -151,6 +164,7 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="MISSION NAME";
 		timeOfChanges=1800.0002;
 		startWeather=0;
 		startWind=0.1;
@@ -207,25 +221,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -243,7 +238,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item1
@@ -269,25 +264,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -305,7 +281,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item2
@@ -331,25 +307,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -367,7 +324,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item3
@@ -393,25 +350,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -429,13 +367,13 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 					};
 					class Attributes
 					{
-						init="call{this setGroupID [""Spartan 1-6""];}";
+						init="this setGroupID [""PLT""];";
 					};
 					id=0;
 					class CustomAttributes
@@ -443,7 +381,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
+							expression="_this setGroupID [_value];";
 							class Value
 							{
 								class data
@@ -455,30 +393,11 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Spartan 1-6";
+									value="PLT";
 								};
 							};
 						};
-						class Attribute1
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=2;
+						nAttributes=1;
 					};
 				};
 				class Item1
@@ -1033,25 +952,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="speaker";
 									expression="_this setspeaker _value;";
 									class Value
@@ -1069,7 +969,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute2
+								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -1088,13 +988,13 @@ class Mission
 										};
 									};
 								};
-								nAttributes=3;
+								nAttributes=2;
 							};
 						};
 					};
 					class Attributes
 					{
-						init="call{this setGroupID [""Spartan 1-1""];}";
+						init="this setGroupID [""1-1""];";
 					};
 					id=5;
 					class CustomAttributes
@@ -1102,7 +1002,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
+							expression="_this setGroupID [_value];";
 							class Value
 							{
 								class data
@@ -1114,30 +1014,11 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Spartan 1-1";
+									value="1-1";
 								};
 							};
 						};
-						class Attribute1
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=2;
+						nAttributes=1;
 					};
 				};
 				class Item2
@@ -1170,25 +1051,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1206,7 +1068,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item1
@@ -1232,25 +1094,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1268,7 +1111,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item2
@@ -1294,25 +1137,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1330,7 +1154,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item3
@@ -1355,25 +1179,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1391,7 +1196,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item4
@@ -1416,25 +1221,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1452,7 +1238,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item5
@@ -1478,25 +1264,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1514,7 +1281,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item6
@@ -1539,25 +1306,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1575,7 +1323,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item7
@@ -1601,25 +1349,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1637,7 +1366,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item8
@@ -1662,25 +1391,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1698,7 +1408,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item9
@@ -1723,25 +1433,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1759,7 +1450,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item10
@@ -1784,25 +1475,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1820,7 +1492,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item11
@@ -1846,25 +1518,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1882,7 +1535,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item12
@@ -1908,25 +1561,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -1944,13 +1578,13 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 					};
 					class Attributes
 					{
-						init="call{this setGroupID [""Spartan 1-2""];}";
+						init="this setGroupID [""1-2""];";
 					};
 					id=17;
 					class CustomAttributes
@@ -1958,7 +1592,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
+							expression="_this setGroupID [_value];";
 							class Value
 							{
 								class data
@@ -1970,30 +1604,11 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Spartan 1-2";
+									value="1-2";
 								};
 							};
 						};
-						class Attribute1
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=2;
+						nAttributes=1;
 					};
 				};
 				class Item3
@@ -2025,25 +1640,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -2061,7 +1657,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item1
@@ -2086,25 +1682,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -2122,7 +1699,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item2
@@ -2147,25 +1724,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -2183,7 +1741,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item3
@@ -2208,25 +1766,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -2244,7 +1783,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item4
@@ -2269,25 +1808,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -2305,7 +1825,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item5
@@ -2330,25 +1850,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
 									property="pitch";
 									expression="_this setpitch _value;";
 									class Value
@@ -2366,7 +1867,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item6
@@ -2386,29 +1887,10 @@ class Mission
 								isPlayable=1;
 							};
 							id=36;
-							type="B_Helicrew_F";
+							type="B_helicrew_F";
 							class CustomAttributes
 							{
 								class Attribute0
-								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -2427,7 +1909,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item7
@@ -2447,29 +1929,10 @@ class Mission
 								isPlayable=1;
 							};
 							id=37;
-							type="B_Helicrew_F";
+							type="B_helicrew_F";
 							class CustomAttributes
 							{
 								class Attribute0
-								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -2488,7 +1951,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item8
@@ -2508,29 +1971,10 @@ class Mission
 								isPlayable=1;
 							};
 							id=38;
-							type="B_Helicrew_F";
+							type="B_helicrew_F";
 							class CustomAttributes
 							{
 								class Attribute0
-								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -2549,7 +1993,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item9
@@ -2569,29 +2013,10 @@ class Mission
 								isPlayable=1;
 							};
 							id=57;
-							type="B_Helicrew_F";
+							type="B_helicrew_F";
 							class CustomAttributes
 							{
 								class Attribute0
-								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -2610,7 +2035,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 						class Item10
@@ -2630,29 +2055,10 @@ class Mission
 								isPlayable=1;
 							};
 							id=59;
-							type="B_Helicrew_F";
+							type="B_helicrew_F";
 							class CustomAttributes
 							{
 								class Attribute0
-								{
-									property="acex_headless_blacklist";
-									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute1
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -2671,13 +2077,13 @@ class Mission
 										};
 									};
 								};
-								nAttributes=2;
+								nAttributes=1;
 							};
 						};
 					};
 					class Attributes
 					{
-						init="call{this setGroupID [""Razor""];}";
+						init="this setGroupID [""Razor""];";
 					};
 					id=29;
 					class CustomAttributes
@@ -2685,7 +2091,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
+							expression="_this setGroupID [_value];";
 							class Value
 							{
 								class data
@@ -2701,26 +2107,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=2;
+						nAttributes=1;
 					};
 				};
 				class Item4
@@ -2735,7 +2122,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this call TFT_fnc_addActions";
+						init="[this, []] call TFT_fnc_addActions";
 						disableSimulation=1;
 					};
 					id=39;
@@ -2761,26 +2148,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
-						{
-							property="ace_isMedicalFacility";
-							expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=2;
+						nAttributes=1;
 					};
 				};
 				class Item5
