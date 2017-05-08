@@ -1,0 +1,4 @@
+respawnTemplates[] = {"MenuPosition"};
+onRespawnMenu = "tft_vi\open.sqf";
+respawnOnStart = -1;
+disabledAI = 1;
