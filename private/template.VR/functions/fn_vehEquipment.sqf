@@ -18,7 +18,7 @@ private _vics = nearestObjects [getMarkerPos "respawn_west", ["AllVehicles"], 10
     private _type = typeOf _x;
 
     // vehicle side == west
-    if ((getnumber (configFile >> "cfgVehicles" >> _type >> "scope") == 2) then {
+    if (getnumber (configFile >> "cfgVehicles" >> _type >> "scope") == 2) then {
         clearItemCargoGlobal _x;
         clearMagazineCargoGlobal _x;
         clearBackpackCargoGlobal _x;
