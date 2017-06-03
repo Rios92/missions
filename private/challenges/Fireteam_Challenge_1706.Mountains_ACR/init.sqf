@@ -1,15 +1,11 @@
 if(isServer) then {
-
 	//set all civilians to flee on hearing gunfire
-	null = [] execVM "civsFlee.sqf";
-    {
+	_nil = [] execVM "civsFlee.sqf";
+	{
 		_x addCuratorEditableObjects [allUnits + vehicles, true];
-    } forEach allCurators;
+	} forEach allCurators;
 	{
 		_x lock true;
 	} forEach vics;
+	tft_ch_timer = 0;
 };
-
-timer = 0;
-message = "";
-hintText = "";

@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=435;
+		nextID=437;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3465.2949,384.21454,1599.5129};
-		dir[]={0.83981764,-0.50638592,-0.19623967};
-		up[]={0.49313292,0.86227226,-0.1152316};
-		aside[]={-0.22756794,-1.053093e-006,-0.97389102};
+		pos[]={3472.9651,380.93201,1590.9967};
+		dir[]={-0.039715838,-0.46269265,0.88563073};
+		up[]={-0.020728553,0.88651669,0.46223161};
+		aside[]={0.99899703,-6.9303496e-008,0.044799674};
 	};
 };
 binarizationWanted=0;
@@ -69,7 +69,8 @@ addons[]=
 	"A3_Weapons_F_Items",
 	"ace_optics",
 	"A3_Structures_F_Items_Electronics",
-	"A3_Soft_F_Exp_LSV_01"
+	"A3_Soft_F_Exp_LSV_01",
+	"A3_Structures_F_Civ_Camping"
 };
 class AddonsMetaData
 {
@@ -436,7 +437,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=85;
+		items=86;
 		class Item0
 		{
 			dataType="Group";
@@ -6458,7 +6459,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="76561197998806051";
+							value="#adminLogged";
 						};
 					};
 				};
@@ -7989,19 +7990,43 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3473.5063,374.09613,1601.5463};
-				angles[]={6.2208595,6.0852823,0.011205014};
+				position[]={3473.5063,374.91113,1601.5463};
+				angles[]={6.2208595,6.0852823,0.011222467};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="call{ " \n "this addAction [ " \n " ""Start timer and unlock vics"", " \n " { " \n "  [(_this select 0), (_this select 2)] remoteExec [""removeAction"", 0, true]; " \n "  { " \n "   [_x, 1] remoteExec [""lock"", 0, true]; " \n "   _x lock 1; " \n "  } forEach vics; " \n "  timer = serverTime; " \n "  publicVariable ""timer""; " \n " }, " \n " [], " \n " 1.5, " \n " true, " \n " true, " \n " """", " \n " ""timer == 0"" " \n "]; " \n "this addAction [ " \n " ""End timer"", " \n " { " \n "  [(_this select 0), (_this select 2)] remoteExec [""removeAction"", 0, true]; " \n "  ""score.sqf"" remoteExec [""execVM"", 2]; " \n " }, " \n " [], " \n " 1.5, " \n " true, " \n " true, " \n " """", " \n " ""timer != 0"" " \n "]; " \n "this addAction [ " \n " ""End Mission"", " \n " { " \n "  ""SideScore"" call BIS_fnc_endMissionServer; " \n " }, " \n " [], " \n " 1.5, " \n " true, " \n " true, " \n " """", " \n " ""!(isNil 'message')"" " \n "];}";
+				init="call{this addAction [ ""Start timer and unlock vics"", { " \n "    [(_this select 0), (_this select 2)] remoteExec [""removeAction"", 0, true]; " \n "    { " \n "        [_x, 1] remoteExec [""lock"", 0, true]; " \n "    } forEach vics; " \n "    tft_ch_timer = serverTime; " \n "    publicVariableServer ""tft_ch_timer""; " \n "     " \n "    (_this select 0) addAction [""End timer"", { " \n "        [(_this select 0), (_this select 2)] remoteExec [""removeAction"", 0, true]; " \n "        ""score.sqf"" remoteExec [""execVM"", 2]; " \n "         " \n "        (_this select 0) addAction [""End Mission"", { " \n "            ""SideScore"" call BIS_fnc_endMissionServer; " \n "        }]; " \n "    }]; " \n "}];}";
 				name="laptop";
 				aiRadarUsage=63;
 			};
 			id=423;
 			type="Land_Laptop_unfolded_F";
+			atlOffset=0.00033569336;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="intro.jpg";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item78
 		{
@@ -8199,6 +8224,22 @@ class Mission
 			type="b_inf";
 			id=434;
 			atlOffset=-374.16269;
+		};
+		class Item85
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3473.4724,374.34961,1601.5931};
+				angles[]={6.2208643,0,0.011198638};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=435;
+			type="Land_CampingTable_small_F";
 		};
 	};
 };

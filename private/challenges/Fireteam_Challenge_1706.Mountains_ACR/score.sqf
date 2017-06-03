@@ -1,50 +1,35 @@
-message = "SCORE";
-hintText = hintText + message + "\n";
-publicVariable "message";
-message remoteExec ["systemChat", 0, true];
+private _points = 0;
+private _msg = "";
 
-timer = round(serverTime - timer);
-publicVariable "timer";
-message = str(timer) + " seconds elapsed: -" + str(timer);
-hintText = hintText + message + "\n";
-message remoteExec ["systemChat", 0, true];
-timer = -1 * timer;
+_msg = _msg + format ["SCORE\nTime penalty: -%1\n", serverTime - tft_ch_timer];
+_points = _points - (serverTime - tft_ch_timer);
 
 if (vip_1 inArea "marker_safe") then {
-	timer = timer + 1000;
-	message = "VIP secured: +1000";
-	hintText = hintText + message + "\n";
-	message remoteExec ["systemChat", 0, true];
+	_msg = _msg + "VIP secured: +1000\n";
+	_points = _points + 1000;
 };
 
-if (vip_2 inArea "marker_safe") then {	
-	timer = timer + 500;
-	message = "Bodyguard secured: +500";
-	hintText = hintText + message + "\n";
-	message remoteExec ["systemChat", 0, true];
+if (vip_2 inArea "marker_safe") then {
+	_msg = _msg + "Bodyguard secured: +500\n";
+	_points = _points + 500;
 };
 
 if (vip_3 inArea "marker_safe") then {
-	timer = timer + 500;
-	message = "Bodyguard secured: +500";
-	hintText = hintText + message + "\n";
-	message remoteExec ["systemChat", 0, true];
+	_msg = _msg + "Bodyguard secured: +500\n";
+	_points = _points + 500;
 };
 
-civCount = count (allDead select {side group _x == CIVILIAN;});
-timer = timer - (civCount * 200);
-message = str(civCount) + " civilians killed: -" + str(civCount * 200);
-hintText = hintText + message + "\n";
-message remoteExec ["systemChat", 0, true];
+private _deadCivCount = count (allDead select {side group _x == civilian});
+if (_deadCivCount > 0) then {
+	_msg = _msg + format["%1 civilians killed: -%2\n", _deadCivCount, _deadCivCount * 200];
+	_points = _points - _deadCivCount * 200;
+};
 
-enemyCount = count (allUnits select {side _x == EAST;});
-timer = timer - (enemyCount * 100);
-message = str(enemyCount) + " enemies remaining: -" + str(enemyCount * 100);
-hintText = hintText + message + "\n";
-message remoteExec ["systemChat", 0, true];
+private _enemyCount = count (allUnits select {side _x == east});
+if (_enemyCount > 0) then {
+	_msg = _msg + format["%1 enemies remaining: -%2\n", _enemyCount, _enemyCount * 50];
+	_points = _points - _enemyCount * 50;
+};
 
-message = "Final Score: " + str(timer);
-hintText = hintText + message + "\n";
-message remoteExec ["systemChat", 0, true];
-
-hintText remoteExec ["hint", 0, true];
+_msg = _msg + format ["\nFinal Score: %1", _points];
+_msg remoteExec ["hint"];
