@@ -8,9 +8,8 @@ if(isServer) then {
 	{
 		_x lock true;
 	} forEach vics;
-	timer = 0;
-	publicVariable "timer";
-	message = "";
-	hintText = "";
-	publicVariable "message";
 };
+
+timer = 0;
+message = "";
+hintText = "";
