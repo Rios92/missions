@@ -2201,6 +2201,7 @@ class Mission
 						angles[]={0,2.8956759,0};
 					};
 					name="HC";
+					isPlayable=1;
 					id=41;
 					type="HeadlessClient_F";
 				};
