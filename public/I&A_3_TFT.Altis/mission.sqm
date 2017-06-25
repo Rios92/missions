@@ -343,7 +343,7 @@ class ScenarioData
 	overviewText="Invade and Annex 3.1.5 Altis.";
 	overViewPicture="Media\LoadingScreen\splash.jpeg";
 	overViewPictureLocked="Media\LoadingScreen\splash.jpeg";
-	onLoadMission="Invade and Annex 3.1.5 Altis.  If you want to help with development then go to AhoyWorld.net, or join us on TeamSpeak 3 at ts.ahoyworld.net";
+	onLoadMission="Invade and Annex 3.1.5 Altis.  If you want to help with development then go to AhoyWorld.net, or join us on TeamSpeak 3 at ts3.tft8.com";
 	loadScreen="Media\LoadingScreen\splash.jpeg";
 	saving=0;
 	disabledAI=1;
@@ -15746,7 +15746,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="this setUnitTrait [""derp_pilot"", true, true]";
 						name="s1_1";
-						description="(TS3: ts.ahoyworld.net) Vortex Pilot";
+						description="(TS3: ts3.tft8.com) Vortex Pilot";
 						isPlayable=1;
 					};
 					id=1946;
@@ -15791,7 +15791,7 @@ class Mission
 						rank="SERGEANT";
 						init="this setUnitTrait [""derp_pilot"", true, true]";
 						name="s3";
-						description="(TS3: ts.ahoyworld.net) Vortex Pilot";
+						description="(TS3: ts3.tft8.com) Vortex Pilot";
 						isPlayable=1;
 					};
 					id=1947;
@@ -15835,7 +15835,7 @@ class Mission
 						skill=0.60000002;
 						init="this setUnitTrait [""derp_pilot"", true, true]";
 						name="s4";
-						description="(TS3: ts.ahoyworld.net) Vortex Pilot";
+						description="(TS3: ts3.tft8.com) Vortex Pilot";
 						isPlayable=1;
 					};
 					id=1948;
@@ -15880,7 +15880,7 @@ class Mission
 						rank="CORPORAL";
 						init="this setUnitTrait [""derp_pilot"", true, true]";
 						name="s5";
-						description="(TS3: ts.ahoyworld.net) Vortex Pilot";
+						description="(TS3: ts3.tft8.com) Vortex Pilot";
 						isPlayable=1;
 					};
 					id=1949;
@@ -15924,7 +15924,7 @@ class Mission
 						skill=0.60000002;
 						init="this setUnitTrait [""derp_pilot"", true, true]";
 						name="s2";
-						description="(TS3: ts.ahoyworld.net) Vortex Pilot";
+						description="(TS3: ts3.tft8.com) Vortex Pilot";
 						isPlayable=1;
 					};
 					id=1950;
@@ -18187,7 +18187,7 @@ class Mission
 					dataType="Marker";
 					position[]={9536.4795,-118.34728,4883.5625};
 					name="Ts_4";
-					text="TS3 = ts.ahoyworld.net";
+					text="TS3 = ts3.tft8.com";
 					type="mil_triangle";
 					colorName="ColorRed";
 					id=2166;
@@ -18198,7 +18198,7 @@ class Mission
 					dataType="Marker";
 					position[]={10497.168,-119.70676,28075.627};
 					name="Ts_5";
-					text="TS3 = ts.ahoyworld.net";
+					text="TS3 = ts3.tft8.com";
 					type="mil_triangle";
 					colorName="ColorRed";
 					id=2169;
@@ -18209,7 +18209,7 @@ class Mission
 					dataType="Marker";
 					position[]={26812.135,-122.21503,13626.075};
 					name="Ts_6";
-					text="TS3 = ts.ahoyworld.net";
+					text="TS3 = ts3.tft8.com";
 					type="mil_triangle";
 					colorName="ColorRed";
 					id=2172;
