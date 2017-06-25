@@ -343,7 +343,7 @@ class ScenarioData
 	overviewText="Invade and Annex 3.1.5 Altis.";
 	overViewPicture="Media\LoadingScreen\splash.jpeg";
 	overViewPictureLocked="Media\LoadingScreen\splash.jpeg";
-	onLoadMission="Invade and Annex 3.1.5 Altis.  If you want to help with development then go to AhoyWorld.net, or join us on TeamSpeak 3 at ts3.tft8.com";
+	onLoadMission="Invade and Annex 3.1.5 Altis.  Join us on TeamSpeak 3 at ts3.tft8.com";
 	loadScreen="Media\LoadingScreen\splash.jpeg";
 	saving=0;
 	disabledAI=1;
