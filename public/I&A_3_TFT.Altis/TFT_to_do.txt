@@ -2,4 +2,3 @@ Images needed:
 
 \Media\Billboards
   report.paa
-  steam.paa
