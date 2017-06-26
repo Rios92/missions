@@ -132,9 +132,9 @@ _email = _infoSquad select 2;
 
 
 // replace line below with your Squad xml's email
-if (_email == "staff@ahoyworld.net") then {
+//if (_email == "staff@ahoyworld.net") then {
 
-_GlobalHint = format["<t align='center' size='2.2' color='#FF0000'>%1<br/></t><t size='1.4' color='#33CCFF'>%2</t><br/>has joined the server, To get involved in the Ahoy World community, register an account at www.AhoyWorld.net and get stuck in!</t><br/>",_squad,_name];
+//_GlobalHint = format["<t align='center' size='2.2' color='#FF0000'>%1<br/></t><t size='1.4' color='#33CCFF'>%2</t><br/>has joined the server, To get involved in the Ahoy World community, register an account at www.AhoyWorld.net and get stuck in!</t><br/>",_squad,_name];
 
-[_GlobalHint] remoteExec ["AW_fnc_globalHint",0,false];
-} else {};
+//[_GlobalHint] remoteExec ["AW_fnc_globalHint",0,false];
+//} else {};

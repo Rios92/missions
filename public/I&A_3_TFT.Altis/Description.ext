@@ -2,7 +2,7 @@
 
 author = AhoyWorld and Community + Baconmop;					// Visible when loading mission
 onLoadName = "Invade & Annex 3.1.5";						// Visible when loading mission
-OnLoadMission = "Invade and Annex 3.1.5. If you want to get involved with AhoyWorld or development of Invade and Annex go to AhoyWorld.net or join ts.ahoyworld.net";
+OnLoadMission = "Invade and Annex 3.1.5.";
 loadScreen = "Media\LoadingScreen\splash.jpeg";				// Visible when loading mission
 overviewPicture = "Media\LoadingScreen\splash.jpeg";			// Visible when selecting mission
 

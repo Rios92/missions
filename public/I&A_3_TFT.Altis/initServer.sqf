@@ -84,7 +84,7 @@ initiateZeusByUID = {
    
     if ( _zeusModuleNumber == -1 ) exitWith
     {    [parseText format ["<br /><t align='center' font='PuristaBold' ><t size='1.2'>Welcome %1</t><br />
-<t size='1'>We hope you have fun on our server. By playing here, you agree to abide by our server rules. In general: no teamkilling, don't goof off in base, and be respectful in chat. For full rules, check our website at www.ahoyworld.net.</t>", name _player], true, nil, 12, 0.3, 0.3] remoteExec ["BIS_fnc_textTiles", _player]; };
+<t size='1'>We hope you have fun on our server. By playing here, you agree to abide by our server rules. In general: no teamkilling, don't goof off in base, and be respectful in chat. For full rules, check our TeamSpeak at ts3.tft8.com.</t>", name _player], true, nil, 12, 0.3, 0.3] remoteExec ["BIS_fnc_textTiles", _player]; };
     _zeusModule = zeusModules select _zeusModuleNumber;
  
     // EU1/EU2
