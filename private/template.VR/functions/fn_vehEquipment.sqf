@@ -14,6 +14,7 @@
 
 private _vics = nearestObjects [getMarkerPos "respawn_west", ["AllVehicles"], 100];
 
+/* TODO
 {
     private _type = typeOf _x;
 
@@ -53,4 +54,4 @@ private _vics = nearestObjects [getMarkerPos "respawn_west", ["AllVehicles"], 10
             _x addItemCargoGlobal ["ACE_quikclot",10];
         } forEach (everybackpack _x);
     };
-} forEach _vics;
+} forEach _vics;*/

@@ -5,21 +5,21 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=517;
+	toggles=513;
 	class ItemIDProvider
 	{
 		nextID=73;
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=5;
 	};
 	class Camera
 	{
-		pos[]={3772.5332,24.968842,6865.3604};
-		dir[]={0.35469046,-0.61790788,0.70187056};
-		up[]={0.27873948,0.78617793,0.55157673};
-		aside[]={0.89258146,3.8393773e-007,-0.45106381};
+		pos[]={3777.3486,24.968842,6875.2822};
+		dir[]={0.28002521,-0.73544037,0.61721146};
+		up[]={0.30388066,0.67752779,0.66979206};
+		aside[]={0.91073215,2.1187589e-008,-0.41319141};
 	};
 };
 binarizationWanted=0;
@@ -87,10 +87,10 @@ class ScenarioData
 	wreckRemovalMinTime=30.000002;
 	wreckRemovalMaxTime=1800;
 	corpseManagerMode=1;
-	corpseLimit=40;
+	corpseLimit=50;
 	corpseRemovalMinTime=30.000002;
 	corpseRemovalMaxTime=1800;
-	minPlayerDistance=300;
+	minPlayerDistance=200;
 };
 class CustomAttributes
 {
@@ -173,8 +173,9 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		year=2035;
-		day=28;
+		year=2017;
+		month=6;
+		day=29;
 		hour=13;
 		minute=37;
 		startFogDecay=0.014;
@@ -381,7 +382,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="_this setGroupID [_value];";
+							expression="[_this, _value] call CBA_fnc_setCallsign";
 							class Value
 							{
 								class data
@@ -1002,7 +1003,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="_this setGroupID [_value];";
+							expression="[_this, _value] call CBA_fnc_setCallsign";
 							class Value
 							{
 								class data
@@ -1592,7 +1593,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="_this setGroupID [_value];";
+							expression="[_this, _value] call CBA_fnc_setCallsign";
 							class Value
 							{
 								class data
@@ -2091,7 +2092,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="_this setGroupID [_value];";
+							expression="[_this, _value] call CBA_fnc_setCallsign";
 							class Value
 							{
 								class data
@@ -2122,7 +2123,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[this, []] call TFT_fnc_addActions";
+						init="call{[this, [""Arsenal"", ""Preparation"", ""Spectator""]] call TFT_fnc_addActions}";
 						disableSimulation=1;
 					};
 					id=39;
@@ -2197,8 +2198,8 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={3792,5,6896};
-						angles[]={0,2.8956759,0};
+						position[]={3787.3394,5,6898.8081};
+						angles[]={-0,2.8956759,0};
 					};
 					name="HC";
 					isPlayable=1;
