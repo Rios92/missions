@@ -1,4 +1,4 @@
-version=52;
+version=53;
 class EditorData
 {
 	moveGridStep=1;
@@ -37,35 +37,35 @@ class AddonsMetaData
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item1
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item2
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item3
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item4
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -183,9 +183,9 @@ class Mission
 		lightningsForced=1;
 		wavesForced=1;
 		windForced=1;
-		year=2015;
-		month=1;
-		day=1;
+		year=2017;
+		month=6;
+		day=29;
 		hour=10;
 		minute=0;
 		startFogDecay=0.014;
@@ -193,14 +193,14 @@ class Mission
 	};
 	class Entities
 	{
-		items=12;
+		items=11;
 		class Item0
 		{
 			dataType="Marker";
 			position[]={6756.6821,343.07428,5595.7876};
 			name="respawn_west";
 			type="Empty";
-			angle=262.47101;
+			angle=262.47098;
 			id=145;
 		};
 		class Item1
@@ -209,7 +209,7 @@ class Mission
 			position[]={6756.4551,343.08435,5593.7314};
 			name="respawn_civilian";
 			type="Empty";
-			angle=20.94454;
+			angle=20.944538;
 			id=146;
 		};
 		class Item2
@@ -290,20 +290,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6751.9526,343.93753,5586.8374};
-				angles[]={0.0013372133,1.6127839,6.2299037};
+				position[]={6751.9531,343.93765,5586.8369};
+				angles[]={0.0013439035,1.6127889,6.2299004};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[this, [""Arsenal"", ""Preparation"", ""BFT"", ""Spectator""]] call TFT_fnc_addActions";
+				init="call{[this, [""Arsenal"", ""Preparation"", ""Spectator""]] call TFT_fnc_addActions}";
 				disableSimulation=1;
 			};
 			id=149;
 			type="Land_PaperBox_open_full_F";
-			atlOffset=0.0028076172;
+			atlOffset=0.0029602051;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -574,7 +574,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value != -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
 							class Value
 							{
 								class data
@@ -895,7 +895,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value != -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
 							class Value
 							{
 								class data
@@ -1645,7 +1645,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value != -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
 							class Value
 							{
 								class data
@@ -2561,7 +2561,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=190;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2623,7 +2623,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=191;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					atlOffset=0.0060424805;
 					class CustomAttributes
 					{
@@ -2686,7 +2686,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=192;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					atlOffset=0.00076293945;
 					class CustomAttributes
 					{
@@ -2749,7 +2749,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=193;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					atlOffset=0.0060424805;
 					class CustomAttributes
 					{
@@ -2812,7 +2812,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=194;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					atlOffset=0.0060119629;
 					class CustomAttributes
 					{
@@ -2877,7 +2877,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6762.394,342.97327,5593.3262};
-						angles[]={0.0026744273,4.7543812,6.2711902};
+						angles[]={0.0026703537,4.7543817,6.2711945};
 					};
 					side="Civilian";
 					flags=6;
@@ -2885,7 +2885,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="group this setGroupId [tft_callsign_civilian]";
+						init="call{group this setGroupId [""Civ""]}";
 						isPlayable=1;
 					};
 					id=196;
@@ -2940,14 +2940,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6764.4336,342.94601,5594.2422};
-						angles[]={0.0026744273,4.7543812,6.2711902};
+						angles[]={0.0026703537,4.7543817,6.2711945};
 					};
 					side="Civilian";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="group this setGroupId [tft_callsign_civilian]";
+						init="call{group this setGroupId [""Civ""]}";
 						isPlayable=1;
 					};
 					id=197;
@@ -3002,14 +3002,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6764.3931,342.94913,5593.2417};
-						angles[]={0.0026744273,4.7543812,6.2711902};
+						angles[]={0.0026703537,4.7543817,6.2711945};
 					};
 					side="Civilian";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="group this setGroupId [tft_callsign_civilian]";
+						init="call{group this setGroupId [""Civ""]}";
 						isPlayable=1;
 					};
 					id=198;
@@ -3064,14 +3064,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6762.436,342.96979,5594.3257};
-						angles[]={0.0026744273,4.7543812,6.2711902};
+						angles[]={0.0026703537,4.7543817,6.2711945};
 					};
 					side="Civilian";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="group this setGroupId [tft_callsign_civilian]";
+						init="call{group this setGroupId [""Civ""]}";
 						isPlayable=1;
 					};
 					id=199;
@@ -3138,20 +3138,6 @@ class Mission
 			name="HC";
 			isPlayable=1;
 			id=200;
-			type="HeadlessClient_F";
-			atlOffset=0.0020446777;
-		};
-		class Item11
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={6762.4746,342.96451,5596.6138};
-				angles[]={6.2818484,2.6839147,6.2711902};
-			};
-			name="HC_1";
-			isPlayable=1;
-			id=201;
 			type="HeadlessClient_F";
 			atlOffset=0.0020446777;
 		};

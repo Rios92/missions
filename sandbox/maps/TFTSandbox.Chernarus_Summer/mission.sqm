@@ -1,4 +1,4 @@
-version=52;
+version=53;
 class EditorData
 {
 	moveGridStep=1;
@@ -41,35 +41,35 @@ class AddonsMetaData
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item1
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item2
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item3
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item4
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -84,16 +84,70 @@ class ScenarioData
 	onLoadMission="Generally empty map for missions, training excercises  etc.";
 	loadScreen="intro.jpg";
 	saving=0;
+	respawnDialog=0;
+	disabledAI=1;
+	respawn=3;
+	respawnDelay=6.5841131;
+	class Header
+	{
+		gameType="Coop";
+		minPlayers=1;
+		maxPlayers=45;
+	};
 	wreckManagerMode=1;
 	wreckLimit=10;
-	wreckRemovalMaxTime=3600;
+	wreckRemovalMinTime=60.000004;
+	wreckRemovalMaxTime=1800;
 	corpseManagerMode=1;
 	corpseLimit=50;
+	corpseRemovalMinTime=60.000004;
+	corpseRemovalMaxTime=1800;
 	minPlayerDistance=250;
 };
 class CustomAttributes
 {
 	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Counter";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -123,7 +177,7 @@ class Mission
 	class Intel
 	{
 		briefingName="TFT8 Sandbox";
-		overviewText="Blank map with slots for TFT8. For use with Operations, drills, and field exercises.";
+		overviewText="Generally empty map for missions, training excercises  etc.";
 		startWeather=0;
 		startWind=0.1;
 		startWaves=0.1;
@@ -131,24 +185,24 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		year=2016;
-		month=1;
-		day=15;
-		hour=16;
-		minute=0;
+		year=2017;
+		month=6;
+		day=29;
+		hour=11;
+		minute=28;
 		startFogDecay=0.1;
 		forecastFogDecay=0;
 	};
 	class Entities
 	{
-		items=12;
+		items=11;
 		class Item0
 		{
 			dataType="Marker";
 			position[]={6756.1831,343.10403,5595.7588};
 			name="respawn_west";
 			type="Empty";
-			angle=262.47101;
+			angle=262.47095;
 			id=412;
 		};
 		class Item1
@@ -157,7 +211,7 @@ class Mission
 			position[]={6755.9561,343.11435,5593.7026};
 			name="respawn_civilian";
 			type="Empty";
-			angle=20.94454;
+			angle=20.944536;
 			id=413;
 		};
 		class Item2
@@ -237,15 +291,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6751.4536,343.96133,5586.8086};
-				angles[]={0.0013372133,1.6127839,6.2299037};
+				position[]={6751.4541,343.9613,5586.8091};
+				angles[]={0.0013439035,1.6127889,6.2299004};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[this, [""Arsenal"", ""Preparation"", ""BFT"", ""Spectator""]] call TFT_fnc_addActions";
+				init="call{[this, [""Arsenal"", ""Preparation"", ""Spectator""]] call TFT_fnc_addActions}";
 				disableSimulation=1;
 			};
 			id=416;
@@ -520,7 +574,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value != -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
 							class Value
 							{
 								class data
@@ -842,7 +896,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value != -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
 							class Value
 							{
 								class data
@@ -1592,7 +1646,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value != -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
 							class Value
 							{
 								class data
@@ -2506,7 +2560,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=457;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2568,7 +2622,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=458;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2630,7 +2684,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=459;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2692,7 +2746,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=460;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2754,7 +2808,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=461;
-					type="B_Helicrew_F";
+					type="B_helicrew_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2817,7 +2871,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6761.895,342.97333,5593.2974};
-						angles[]={0.0026744273,4.7543812,6.2711902};
+						angles[]={0.0026703537,4.7543817,6.2711945};
 					};
 					side="Civilian";
 					flags=6;
@@ -2825,7 +2879,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="group this setGroupId [tft_callsign_civilian]";
+						init="call{group this setGroupId [""Civ""]}";
 						isPlayable=1;
 					};
 					id=463;
@@ -2880,14 +2934,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6763.9346,342.94641,5594.2134};
-						angles[]={0.0026744273,4.7543812,6.2711902};
+						angles[]={0.0026703537,4.7543817,6.2711945};
 					};
 					side="Civilian";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="group this setGroupId [tft_callsign_civilian]";
+						init="call{group this setGroupId [""Civ""]}";
 						isPlayable=1;
 					};
 					id=464;
@@ -2942,14 +2996,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6763.894,342.94958,5593.2129};
-						angles[]={0.0026744273,4.7543812,6.2711902};
+						angles[]={0.0026703537,4.7543817,6.2711945};
 					};
 					side="Civilian";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="group this setGroupId [tft_callsign_civilian]";
+						init="call{group this setGroupId [""Civ""]}";
 						isPlayable=1;
 					};
 					id=465;
@@ -3004,14 +3058,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6761.937,342.97015,5594.2969};
-						angles[]={0.0026744273,4.7543812,6.2711902};
+						angles[]={0.0026703537,4.7543817,6.2711945};
 					};
 					side="Civilian";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="group this setGroupId [tft_callsign_civilian]";
+						init="call{group this setGroupId [""Civ""]}";
 						isPlayable=1;
 					};
 					id=466;
@@ -3078,19 +3132,6 @@ class Mission
 			name="HC";
 			isPlayable=1;
 			id=467;
-			type="HeadlessClient_F";
-		};
-		class Item11
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={6761.9756,342.96838,5596.585};
-				angles[]={6.2818484,2.6839147,6.2711902};
-			};
-			name="HC_1";
-			isPlayable=1;
-			id=468;
 			type="HeadlessClient_F";
 		};
 	};
