@@ -9,7 +9,7 @@
  * -
  *
  * Example:
- * [_veh1, _veh2] call TFT_fnc_loadSupplies;
+ * [_veh1, _veh2] call TFT_fnc_vehEquipment;
  */
 
  private "_vics";
