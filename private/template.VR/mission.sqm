@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=74;
+		nextID=73;
 	};
 	class LayerIndexProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3777.1685,13.292004,6903.584};
-		dir[]={0.81298953,-0.42160267,-0.40191376};
-		up[]={0.37807202,0.90671378,-0.18690564};
-		aside[]={-0.44320074,7.0920214e-007,-0.89650762};
+		pos[]={3786.6265,24.968842,6907.3984};
+		dir[]={-0.014532858,-0.78695565,-0.61702853};
+		up[]={-0.018531406,0.61696106,-0.78678113};
+		aside[]={-0.99980259,-1.7425191e-007,0.023547012};
 	};
 };
 binarizationWanted=0;
@@ -28,15 +28,13 @@ addons[]=
 	"A3_Characters_F",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
 	"A3_Structures_F_Mil_Cargo",
-	"A3_Ui_F",
-	"A3_Weapons_F_Ammoboxes",
-	"ace_cargo"
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=6;
+		items=4;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -64,20 +62,6 @@ class AddonsMetaData
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
-		};
-		class Item4
-		{
-			className="A3_Weapons_F";
-			name="Arma 3 Alpha - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item5
-		{
-			className="ace_cargo";
-			name="ACE3 - Cargo";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -199,7 +183,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2;
+		items=1;
 		class Item0
 		{
 			dataType="Layer";
@@ -398,7 +382,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
+							expression="_this setGroupID [_value];";
 							class Value
 							{
 								class data
@@ -437,7 +421,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="SL_11";
 								description="Spartan 1-1 Squad Leader";
 								isPlayable=1;
@@ -481,7 +464,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="ASL_11";
 								description="Spartan 1-1A Team Leader";
 								isPlayable=1;
@@ -525,7 +507,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="TL_11";
 								description="Spartan 1-1B Team Leader";
 								isPlayable=1;
@@ -568,7 +549,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="AR_11";
 								description="Spartan 1-1 AR";
 								isPlayable=1;
@@ -611,7 +591,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="GRN_11";
 								description="Spartan 1-1 GRN";
 								isPlayable=1;
@@ -655,7 +634,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="CORPORAL";
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="CLS_11";
 								description="Spartan 1-1 CLS";
 								isPlayable=1;
@@ -698,7 +676,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="R1_11";
 								description="Spartan 1-1 Rifleman";
 								isPlayable=1;
@@ -742,7 +719,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="GRN2_11";
 								description="Spartan 1-1 GRN";
 								isPlayable=1;
@@ -785,7 +761,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="DM_11";
 								description="Spartan 1-1 DMR";
 								isPlayable=1;
@@ -828,7 +803,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="R2_11";
 								description="Spartan 1-1 Rifleman";
 								isPlayable=1;
@@ -871,7 +845,6 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="this setGroupId [tft_bft_callsign_1_2];";
 								name="AR2_11";
 								description="Spartan 1-1 AR";
 								isPlayable=1;
@@ -915,7 +888,6 @@ class Mission
 							{
 								skill=0.60000002;
 								rank="SERGEANT";
-								init="this setGroupId [tft_bft_callsign_1_1];";
 								name="AT_11";
 								description="Spartan 1-1 Rifleman AT";
 								isPlayable=1;
@@ -1019,7 +991,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
+							expression="_this setGroupID [_value];";
 							class Value
 							{
 								class data
@@ -1609,7 +1581,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
+							expression="_this setGroupID [_value];";
 							class Value
 							{
 								class data
@@ -2108,7 +2080,7 @@ class Mission
 						class Attribute0
 						{
 							property="groupID";
-							expression="[_this, _value] call CBA_fnc_setCallsign";
+							expression="_this setGroupID [_value];";
 							class Value
 							{
 								class data
@@ -2235,45 +2207,6 @@ class Mission
 			};
 			id=70;
 			atlOffset=7.0857433e+018;
-		};
-		class Item1
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3793.679,5.8924227,6898.5308};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{[this] call TFT_fnc_vehEquipment;}";
-			};
-			id=73;
-			type="B_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
 		};
 	};
 	class Connections
