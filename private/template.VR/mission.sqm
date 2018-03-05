@@ -8,7 +8,7 @@ class EditorData
 	toggles=1573;
 	class ItemIDProvider
 	{
-		nextID=241;
+		nextID=242;
 	};
 	class LayerIndexProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7510.0229,19.315701,7431.2959};
-		dir[]={0.69366986,-0.72048628,0.00054655073};
-		up[]={0.72079188,0.69308031,0.00056668569};
-		aside[]={0.00078225625,-2.1318563e-008,-1.0000077};
+		pos[]={7505.3564,16.883152,7420.8164};
+		dir[]={0.85450011,-0.51968509,-0.00345757};
+		up[]={0.52013022,0.85402679,-0.0021065131};
+		aside[]={-0.0040542646,-8.378538e-007,-0.99999183};
 	};
 };
 binarizationWanted=0;
@@ -52,7 +52,8 @@ addons[]=
 	"A3_Weapons_F_Explosives",
 	"A3_Weapons_F_Orange",
 	"A3_Characters_F_Exp_Civil",
-	"A3_Ui_F"
+	"A3_Ui_F",
+	"A3_Structures_F_Mil_Flags"
 };
 class AddonsMetaData
 {
@@ -218,7 +219,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=13;
+		items=14;
 		class Item0
 		{
 			dataType="Marker";
@@ -3251,6 +3252,44 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -3268,7 +3307,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3287,7 +3326,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=5;
 					};
 				};
 			};
@@ -3387,6 +3426,44 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -3404,7 +3481,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3423,7 +3500,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=5;
 					};
 				};
 			};
@@ -3522,6 +3599,44 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -3539,7 +3654,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3558,7 +3673,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=5;
 					};
 				};
 				class Item1
@@ -3602,6 +3717,44 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -3619,7 +3772,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3638,7 +3791,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=5;
 					};
 				};
 			};
@@ -3737,6 +3890,44 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -3754,7 +3945,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3773,7 +3964,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=5;
 					};
 				};
 				class Item1
@@ -3817,6 +4008,44 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -3834,7 +4063,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3853,7 +4082,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=5;
 					};
 				};
 			};
@@ -3952,6 +4181,44 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -3969,7 +4236,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -3988,7 +4255,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=5;
 					};
 				};
 				class Item1
@@ -4032,6 +4299,44 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -4049,7 +4354,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -4068,7 +4373,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=5;
 					};
 				};
 			};
@@ -4167,6 +4472,44 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -4184,7 +4527,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -4203,7 +4546,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=5;
 					};
 				};
 				class Item1
@@ -4247,6 +4590,44 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -4264,7 +4645,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -4283,7 +4664,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=5;
 					};
 				};
 			};
@@ -4333,6 +4714,22 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7528,8.9768047,7432.5};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setFlagTexture ""tft8.jpg""}";
+			};
+			id=241;
+			type="Flag_White_F";
 		};
 	};
 };
