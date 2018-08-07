@@ -1,3 +1,2 @@
-class CfgFunctions {
-    #include "functions\CfgFunctions.hpp" //don't touch
-};
+
+#include "include\functions.hpp"
